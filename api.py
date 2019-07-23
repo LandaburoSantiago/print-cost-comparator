@@ -118,5 +118,4 @@ def mas_detalles():
 
 
 if __name__ == '__main__':
-      port=os.environ["PORT"]
-      app.run('0.0.0.0',int(port), debug=True)
+      app.run(debug=True, port=33507)
