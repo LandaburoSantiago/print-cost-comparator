@@ -7,7 +7,7 @@ import funciones_bbdd
 
 app = Flask(__name__)
 dir = os.getcwd()
-app.config['UPLOAD_FOLDER'] = 'https://github.com/LandaburoSantiago/proyecto-fotocopiadoras/tree/master/static'
+app.config['UPLOAD_FOLDER'] = dir
 directorio = os.path.dirname(__file__)
 
 
