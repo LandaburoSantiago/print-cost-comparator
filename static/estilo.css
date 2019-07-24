@@ -1,4 +1,4 @@
-html{
+hhtml{
   background-color: #1b1b1b;
 }
 
@@ -274,9 +274,12 @@ html{
 
 }
 
-@media screen and (max-device-width : 900px) {
+@media screen and (max-device-width : 395px) {
       .navbar-brand{
-        margin-left:40%;
+        margin-left:166px;
+      }
+      .navbar.navbar-light.bg-light{
+            width:535px;
       }
       .btn.btn-primary{
         font-size:28px;
@@ -290,7 +293,7 @@ html{
 
       .ciudad1{
         font-family:Oswald;
-        margin-left:70%
+        margin-left:75%
       }
       .ciudad2{
         font-family:Oswald;
@@ -375,10 +378,6 @@ html{
         height: 29px;
         width: 40px;html{
         background-color: #1b1b1b;
-      }
-
-      .navbar-brand{
-        margin-left:43%;
       }
 
       .btn.btn-primary{
@@ -541,7 +540,7 @@ html{
         height:170px;
         position:absolute;
         margin-top: 400px;
-        margin-left:365px;
+        margin-left:190px;
       }
        
 }
