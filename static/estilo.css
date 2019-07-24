@@ -308,12 +308,12 @@ html{
 
 
       .custom-file{
-        width:50%;
+        width:367px;
       }
 
       .btn.btn-outline-info{
         position: absolute;
-        margin-left: 200px;
+        margin-left: 180px;
       }
 
       .btn.btn-success{
@@ -323,9 +323,9 @@ html{
 
       .container{
         position: absolute;
-        margin-top: 15%;
-        margin-left: 35%;
-        width: 800px;
+        margin-top: 25%;
+        margin-left: 15%;
+        width: 397px;
       }
 
       .custom-control.custom-radio{
@@ -405,10 +405,6 @@ html{
         transition: all 0.5s cubic-bezier(1, -0.1, 0.26, 0.29);
       }
 
-
-      .custom-file{
-        width:50%;
-      }
 
       .btn.btn-outline-info{
         position: absolute;
