@@ -30,8 +30,8 @@ def obtenerMomentoDia(hora):
 
 
 def conexion():
-    cliente = MongoClient(host='181.98.6.173', port=27017)
-    db = cliente.get_database('copia_barata')
+    client = pymongo.MongoClient("mongodb+srv://Santi:<proyectofotocopiadoras>@cluster0-gs6ij.mongodb.net/test?retryWrites=true&w=majority")
+    db = client.test
     return db
 
 
