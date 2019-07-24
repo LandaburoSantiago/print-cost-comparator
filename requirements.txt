@@ -7,3 +7,4 @@ MarkupSafe==1.1.0
 Werkzeug==0.14.1
 Flask-Uploads==0.2.1
 gunicorn==19.7.1
+pymongo
