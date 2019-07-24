@@ -491,7 +491,7 @@ html{
       .alert.alert-primary{
         position: absolute;
         margin-top: 100px;
-        margin-left: 500px;
+        margin-left: 100px;
       }
 
       .btn.btn-outline-dark{
@@ -535,7 +535,7 @@ html{
       .rounded-pill{
         height:170px;
         position:absolute;
-        margin-top: 400px;
+        margin-top: 450px;
         margin-left:190px;
       }
        
