@@ -2,272 +2,546 @@ html{
   background-color: #1b1b1b;
 }
 
-.navbar-brand{
-  margin-left:43%;
-}
+@media screen and (max-width: 1900px) {
+       .navbar-brand{
+        margin-left:43%;
+      }
+      .btn.btn-primary{
+        font-size:28px;
+        position:absolute;
+        background-color:#212529;
+        border-color:#28a745;
+        margin-top: 230px;
+        width:230px;
+        height:60px
+      }
 
-.btn.btn-primary{
-  font-size:28px;
-  position:absolute;
-  background-color:#212529;
-  border-color:#28a745;
-  margin-top: 230px;
-  width:230px;
-  height:60px
-}
+      .ciudad1{
+        font-family:Oswald;
+        margin-left:70%
+      }
+      .ciudad2{
+        font-family:Oswald;
+        margin-left: 15%
+      }
 
-.ciudad1{
-  font-family:Oswald;
-  margin-left:70%
-}
-.ciudad2{
-  font-family:Oswald;
-  margin-left: 15%
-}
-
-.btn.btn-primary:hover{
-  margin-top: 225px;
-  border-color:#FF5722;
-  transition: all 0.5s cubic-bezier(1, -0.1, 0.26, 0.29);
-}
-
-
-.custom-file{
-  width:50%;
-}
-
-.btn.btn-outline-info{
-  position: absolute;
-  margin-left: 200px;
-}
-
-.btn.btn-success{
- position: absolute;
- margin-top: 5px;
-}
-
-.container{
-  position: absolute;
-  margin-top: 15%;
-  margin-left: 35%;
-  width: 800px;
-}
-
-.custom-control.custom-radio{
-  color: white;
-}
-
-.radios2{
-  position: absolute;
-  margin-left: 200px;
-  margin-top:-48px
-}
-
-table{
-  position:absolute;
-  margin-top: 150px
-}
-tbody{
-  background-color: white;
-}
-
-.lblNumcopias{
-  color: white;
-}
-
-.ingresar_numero{
-  border-style: solid;
-  border-width: 1.4px;
-  border-radius: 9px;
-  border-color:#607D8B;
-  width: 225px;
-}
-
-.ingresar_numero:hover{
-  border-color: #86ff00;
-
-}
-
-.estado_cerrado:hover{
-   background-color: #e47070;
-   transition: all 0.5s ease;
-}
-.estado_abierto:hover{
-  background-color: #46ce76;
-  transition: all 0.5s ease;
-}
-
-.btn.btn-secondary.btn-sm{
-  position:absolute;
-  background-color:#5b8288;
-  height: 29px;
-  width: 40px;html{
-  background-color: #1b1b1b;
-}
-
-.navbar-brand{
-  margin-left:43%;
-}
-
-.btn.btn-primary{
-  font-size:28px;
-  position:absolute;
-  background-color:#212529;
-  border-color:#28a745;
-  margin-top: 230px;
-  width:230px;
-  height:60px
-}
-
-.ciudad1{
-  font-family:Oswald;
-  margin-left:70%
-}
-.ciudad2{
-  font-family:Oswald;
-  margin-left: 15%
-}
-
-.btn.btn-primary:hover{
-  margin-top: 225px;
-  border-color:#FF5722;
-  transition: all 0.5s cubic-bezier(1, -0.1, 0.26, 0.29);
-}
+      .btn.btn-primary:hover{
+        margin-top: 225px;
+        border-color:#FF5722;
+        transition: all 0.5s cubic-bezier(1, -0.1, 0.26, 0.29);
+      }
 
 
-.custom-file{
-  width:50%;
+      .custom-file{
+        width:50%;
+      }
+
+      .btn.btn-outline-info{
+        position: absolute;
+        margin-left: 200px;
+      }
+
+      .btn.btn-success{
+       position: absolute;
+       margin-top: 5px;
+      }
+
+      .container{
+        position: absolute;
+        margin-top: 15%;
+        margin-left: 35%;
+        width: 800px;
+      }
+
+      .custom-control.custom-radio{
+        color: white;
+      }
+
+      .radios2{
+        position: absolute;
+        margin-left: 200px;
+        margin-top:-48px
+      }
+
+      table{
+        position:absolute;
+        margin-top: 150px
+      }
+      tbody{
+        background-color: white;
+      }
+
+      .lblNumcopias{
+        color: white;
+      }
+
+      .ingresar_numero{
+        border-style: solid;
+        border-width: 1.4px;
+        border-radius: 9px;
+        border-color:#607D8B;
+        width: 225px;
+      }
+
+      .ingresar_numero:hover{
+        border-color: #86ff00;
+
+      }
+
+      .estado_cerrado:hover{
+         background-color: #e47070;
+         transition: all 0.5s ease;
+      }
+      .estado_abierto:hover{
+        background-color: #46ce76;
+        transition: all 0.5s ease;
+      }
+
+      .btn.btn-secondary.btn-sm{
+        position:absolute;
+        background-color:#5b8288;
+        height: 29px;
+        width: 40px;html{
+        background-color: #1b1b1b;
+      }
+
+      .navbar-brand{
+        margin-left:43%;
+      }
+
+      .btn.btn-primary{
+        font-size:28px;
+        position:absolute;
+        background-color:#212529;
+        border-color:#28a745;
+        margin-top: 230px;
+        width:230px;
+        height:60px
+      }
+
+      .ciudad1{
+        font-family:Oswald;
+        margin-left:70%
+      }
+      .ciudad2{
+        font-family:Oswald;
+        margin-left: 15%
+      }
+
+      .btn.btn-primary:hover{
+        margin-top: 225px;
+        border-color:#FF5722;
+        transition: all 0.5s cubic-bezier(1, -0.1, 0.26, 0.29);
+      }
+
+
+      .custom-file{
+        width:50%;
+      }
+
+      .btn.btn-outline-info{
+        position: absolute;
+        margin-left: 200px;
+      }
+
+      .btn.btn-success{
+       position: absolute;
+       margin-top: 5px;
+      }
+
+      .container{
+        position: absolute;
+        margin-top: 15%;
+        margin-left: 35%;
+        width: 800px;
+      }
+
+      .custom-control.custom-radio{
+        color: white;
+      }
+
+      .radios2{
+        position: absolute;
+        margin-left: 200px;
+        margin-top:-48px
+      }
+
+      table{
+        position:absolute;
+        margin-top: 150px
+      }
+      tbody{
+        background-color: white;
+      }
+
+      .lblNumcopias{
+        color: white;
+      }
+
+      .ingresar_numero{
+        border-style: solid;
+        border-width: 1.4px;
+        border-radius: 9px;
+        border-color:#607D8B;
+        width: 225px;
+      }
+
+      .ingresar_numero:hover{
+        border-color: #86ff00;
+
+      }
+
+      .estado_cerrado:hover{
+         background-color: #e47070;
+         transition: all 0.5s ease;
+      }
+      .estado_abierto:hover{
+        background-color: #46ce76;
+        transition: all 0.5s ease;
+      }
+
+      .btn.btn-secondary.btn-sm{
+        position:absolute;
+        background-color:#5b8288;
+        height: 29px;
+        width: 40px;
+        margin-top: -3px;
+        margin-left:30px;
+      }
+      .btn.btn-secondary.btn-sm:hover{
+        border-color:white;
+        transition: 0.5s all ease;
+      }
+      s
+        margin-top: -3px;
+        margin-left:30px;
+      }
+      .btn.btn-secondary.btn-sm:hover{
+        border-color:white;
+        transition: 0.5s all ease;
+      }
+
+      .alert.alert-primary{
+        position: absolute;
+        margin-top: 100px;
+        margin-left: 500px;
+      }
+
+      .btn.btn-outline-dark{
+        position:absolute;
+        margin-top:-46px;
+        margin-left: 15px;
+      }
+      .info-precio-color{
+        margin-left: 225px;
+        margin-top: -40px;
+      }
+
+      .info-precio-byn{
+        margin-left: 310px;
+        margin-top: -40px;
+      }
+      .info-mail{
+        margin-left: 58px;
+        margin-top: -40px;
+      }
+
+      .info-telefono{
+        margin-left: 75px;
+        margin-top: -40px;
+      }
+
+      .info-direccion{
+        margin-left: 85px;
+        margin-top: -40px;
+      }
+
+      .info-sabado{
+        font-weight:bold;
+        margin-left: 155px;
+        margin-top: -40px;
+      }
+
+      .titulos-info{
+        font-weight:bold;
+      }
+      .rounded-pill{
+        height:170px;
+        position:absolute;
+        margin-top: 400px;
+        margin-left:607px;
+      }
+
 }
 
-.btn.btn-outline-info{
-  position: absolute;
-  margin-left: 200px;
-}
+@media screen and (max-device-width : 900px) {
+      .navbar-brand{
+        margin-left:40%;
+      }
+      .btn.btn-primary{
+        font-size:28px;
+        position:absolute;
+        background-color:#212529;
+        border-color:#28a745;
+        margin-top: 230px;
+        width:230px;
+        height:60px
+      }
 
-.btn.btn-success{
- position: absolute;
- margin-top: 5px;
-}
+      .ciudad1{
+        font-family:Oswald;
+        margin-left:70%
+      }
+      .ciudad2{
+        font-family:Oswald;
+        margin-left: 4%
+      }
 
-.container{
-  position: absolute;
-  margin-top: 15%;
-  margin-left: 35%;
-  width: 800px;
-}
+      .btn.btn-primary:hover{
+        margin-top: 225px;
+        border-color:#FF5722;
+        transition: all 0.5s cubic-bezier(1, -0.1, 0.26, 0.29);
+      }
 
-.custom-control.custom-radio{
-  color: white;
-}
 
-.radios2{
-  position: absolute;
-  margin-left: 200px;
-  margin-top:-48px
-}
+      .custom-file{
+        width:50%;
+      }
 
-table{
-  position:absolute;
-  margin-top: 150px
-}
-tbody{
-  background-color: white;
-}
+      .btn.btn-outline-info{
+        position: absolute;
+        margin-left: 200px;
+      }
 
-.lblNumcopias{
-  color: white;
-}
+      .btn.btn-success{
+       position: absolute;
+       margin-top: 5px;
+      }
 
-.ingresar_numero{
-  border-style: solid;
-  border-width: 1.4px;
-  border-radius: 9px;
-  border-color:#607D8B;
-  width: 225px;
-}
+      .container{
+        position: absolute;
+        margin-top: 15%;
+        margin-left: 35%;
+        width: 800px;
+      }
 
-.ingresar_numero:hover{
-  border-color: #86ff00;
+      .custom-control.custom-radio{
+        color: white;
+      }
 
-}
+      .radios2{
+        position: absolute;
+        margin-left: 200px;
+        margin-top:-48px
+      }
 
-.estado_cerrado:hover{
-   background-color: #e47070;
-   transition: all 0.5s ease;
-}
-.estado_abierto:hover{
-  background-color: #46ce76;
-  transition: all 0.5s ease;
-}
+      table{
+        position:absolute;
+        margin-top: 150px
+      }
+      tbody{
+        background-color: white;
+      }
 
-.btn.btn-secondary.btn-sm{
-  position:absolute;
-  background-color:#5b8288;
-  height: 29px;
-  width: 40px;
-  margin-top: -3px;
-  margin-left:30px;
-}
-.btn.btn-secondary.btn-sm:hover{
-  border-color:white;
-  transition: 0.5s all ease;
-}
-s
-  margin-top: -3px;
-  margin-left:30px;
-}
-.btn.btn-secondary.btn-sm:hover{
-  border-color:white;
-  transition: 0.5s all ease;
-}
+      .lblNumcopias{
+        color: white;
+      }
 
-.alert.alert-primary{
-  position: absolute;
-  margin-top: 100px;
-  margin-left: 500px;
-}
+      .ingresar_numero{
+        border-style: solid;
+        border-width: 1.4px;
+        border-radius: 9px;
+        border-color:#607D8B;
+        width: 225px;
+      }
 
-.btn.btn-outline-dark{
-  position:absolute;
-  margin-top:-46px;
-  margin-left: 15px;
-}
-.info-precio-color{
-  margin-left: 225px;
-  margin-top: -40px;
-}
+      .ingresar_numero:hover{
+        border-color: #86ff00;
 
-.info-precio-byn{
-  margin-left: 310px;
-  margin-top: -40px;
-}
-.info-mail{
-  margin-left: 58px;
-  margin-top: -40px;
-}
+      }
 
-.info-telefono{
-  margin-left: 75px;
-  margin-top: -40px;
-}
+      .estado_cerrado:hover{
+         background-color: #e47070;
+         transition: all 0.5s ease;
+      }
+      .estado_abierto:hover{
+        background-color: #46ce76;
+        transition: all 0.5s ease;
+      }
 
-.info-direccion{
-  margin-left: 85px;
-  margin-top: -40px;
-}
+      .btn.btn-secondary.btn-sm{
+        position:absolute;
+        background-color:#5b8288;
+        height: 29px;
+        width: 40px;html{
+        background-color: #1b1b1b;
+      }
 
-.info-sabado{
-  font-weight:bold;
-  margin-left: 155px;
-  margin-top: -40px;
-}
+      .navbar-brand{
+        margin-left:43%;
+      }
 
-.titulos-info{
-  font-weight:bold;
-}
-.rounded-pill{
-  height:170px;
-  position:absolute;
-  margin-top: 400px;
-  margin-left:607px;
+      .btn.btn-primary{
+        font-size:28px;
+        position:absolute;
+        background-color:#212529;
+        border-color:#28a745;
+        margin-top: 230px;
+        width:230px;
+        height:60px
+      }
+
+      .ciudad1{
+        font-family:Oswald;
+        margin-left:70%
+      }
+      .ciudad2{
+        font-family:Oswald;
+        margin-left: 15%
+      }
+
+      .btn.btn-primary:hover{
+        margin-top: 225px;
+        border-color:#FF5722;
+        transition: all 0.5s cubic-bezier(1, -0.1, 0.26, 0.29);
+      }
+
+
+      .custom-file{
+        width:50%;
+      }
+
+      .btn.btn-outline-info{
+        position: absolute;
+        margin-left: 200px;
+      }
+
+      .btn.btn-success{
+       position: absolute;
+       margin-top: 5px;
+      }
+
+      .container{
+        position: absolute;
+        margin-top: 15%;
+        margin-left: 35%;
+        width: 800px;
+      }
+
+      .custom-control.custom-radio{
+        color: white;
+      }
+
+      .radios2{
+        position: absolute;
+        margin-left: 200px;
+        margin-top:-48px
+      }
+
+      table{
+        position:absolute;
+        margin-top: 150px
+      }
+      tbody{
+        background-color: white;
+      }
+
+      .lblNumcopias{
+        color: white;
+      }
+
+      .ingresar_numero{
+        border-style: solid;
+        border-width: 1.4px;
+        border-radius: 9px;
+        border-color:#607D8B;
+        width: 225px;
+      }
+
+      .ingresar_numero:hover{
+        border-color: #86ff00;
+
+      }
+
+      .estado_cerrado:hover{
+         background-color: #e47070;
+         transition: all 0.5s ease;
+      }
+      .estado_abierto:hover{
+        background-color: #46ce76;
+        transition: all 0.5s ease;
+      }
+
+      .btn.btn-secondary.btn-sm{
+        position:absolute;
+        background-color:#5b8288;
+        height: 29px;
+        width: 40px;
+        margin-top: -3px;
+        margin-left:30px;
+      }
+      .btn.btn-secondary.btn-sm:hover{
+        border-color:white;
+        transition: 0.5s all ease;
+      }
+      s
+        margin-top: -3px;
+        margin-left:30px;
+      }
+      .btn.btn-secondary.btn-sm:hover{
+        border-color:white;
+        transition: 0.5s all ease;
+      }
+
+      .alert.alert-primary{
+        position: absolute;
+        margin-top: 100px;
+        margin-left: 500px;
+      }
+
+      .btn.btn-outline-dark{
+        position:absolute;
+        margin-top:-46px;
+        margin-left: 15px;
+      }
+      .info-precio-color{
+        margin-left: 225px;
+        margin-top: -40px;
+      }
+
+      .info-precio-byn{
+        margin-left: 310px;
+        margin-top: -40px;
+      }
+      .info-mail{
+        margin-left: 58px;
+        margin-top: -40px;
+      }
+
+      .info-telefono{
+        margin-left: 75px;
+        margin-top: -40px;
+      }
+
+      .info-direccion{
+        margin-left: 85px;
+        margin-top: -40px;
+      }
+
+      .info-sabado{
+        font-weight:bold;
+        margin-left: 155px;
+        margin-top: -40px;
+      }
+
+      .titulos-info{
+        font-weight:bold;
+      }
+      .rounded-pill{
+        height:170px;
+        position:absolute;
+        margin-top: 400px;
+        margin-left:365px;
+      }
+       
 }
