@@ -6,7 +6,7 @@ from datetime import datetime, date, timedelta
 import funciones_bbdd
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = '/static/Archivos_PDF'
+app.config['UPLOAD_FOLDER'] = '/path/to/your/project/static/ACHIVOS_PDF'
 directorio = os.path.dirname(__file__)
 
 
