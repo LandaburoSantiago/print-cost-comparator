@@ -1,1 +1,1 @@
-web: gunicorn run: api -b "0.0.0.0:$PORT" -w 3
+web: python3 api.py $PORT
