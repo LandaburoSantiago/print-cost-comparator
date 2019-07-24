@@ -31,7 +31,7 @@ def obtenerMomentoDia(hora):
 
 def conexion():
     client = MongoClient("mongodb+srv://Santi:proyectofotocopiadoras@cluster0-gs6ij.mongodb.net/test?retryWrites=true&w=majority")
-    db = client.proyecto-fotocopiadoras
+    db = client.fotocopiadoras
     return db
 
 
