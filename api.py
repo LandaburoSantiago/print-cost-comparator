@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 from flask import render_template, request
-from cuentapaginas import count_pages
+from cuentapaginas import contar_paginas
 from datetime import datetime, date, timedelta
 import funciones_bbdd
 
