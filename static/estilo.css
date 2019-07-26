@@ -316,7 +316,7 @@ html{
       .container{
         position: absolute;
         margin-top: 15%;
-        margin-left: 35%;
+        margin-left: 510px;
         width: 800px;
       }
 
@@ -414,13 +414,6 @@ html{
       .btn.btn-success{
        position: absolute;
        margin-top: 5px;
-      }
-
-      .container{
-        position: absolute;
-        margin-top: 15%;
-        margin-left: 35%;
-        width: 800px;
       }
 
       .custom-control.custom-radio{
@@ -815,3 +808,4 @@ html{
       }
 
 }
+
