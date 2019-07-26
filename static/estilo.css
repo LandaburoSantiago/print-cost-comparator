@@ -269,7 +269,7 @@ html{
        
 }
 
-@media screen and (max-device-width: 1280px) and (min-device-width: 600px) {
+@media screen and (max-device-width: 1380px) and (min-device-width: 600px) {
        .navbar-brand{
         margin-left:43%;
       }
