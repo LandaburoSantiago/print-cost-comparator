@@ -49,7 +49,7 @@ def resultados():
         str(hora)
         str(minutos)
         str(segundos)
-        str(dia)
+        int(dia)
         hora_formateada = funciones_bbdd.obtenerHoraFormateada(hora, minutos, segundos)
         hora = datetime.strptime(hora_formateada, "%X").time()
         momento_dia = funciones_bbdd.obtenerMomentoDia(hora)
