@@ -181,7 +181,7 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
         # FORMATEA EL NUMERO PARA QUE TENGA LA FORMA N.NN
         precio = "{0: .2f}".format(precio)
         # SI EL DIA ES 7(DOMINGO) LA SITUACION SE PONE EN 'CERRADO' AUTOMATICAMENTE
-        if dia != 7:
+        if dia != 0:
             # SI NO ES DOMINGO SE PREGUNTA SI ES SABADO
             if dia == 6:
                 # SI ES SABADO SE PREGUNTA SI EL SABADO DE TARDE ABRE
