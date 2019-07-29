@@ -158,6 +158,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
         lista.append(diccionario)
     # LA LISTA SE ORDENA POR EL CAMPO PRECIO_TOTAL
     lista.sort(key=lambda k: k['precio_total'])
+    print(lista)
     return lista
 
 
@@ -278,6 +279,7 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
         lista.append(diccionario)
     # LA LISTA SE ORDENA POR EL CAMPO PRECIO_TOTAL
     lista.sort(key=lambda k: k['precio_total'])
+    print(lista)
     return lista
 
 
