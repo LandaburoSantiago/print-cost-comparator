@@ -48,6 +48,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
     db = conexion()
     documento = db.get_collection('fotocopiadoras_'+ciudad).find()
     lista = []
+    print(dia+'!!!!!')
     if simple_doble == 'doblefaz':
         # AL SER DOBLE FAZ SE DIVIDE LA CANTIDAD DE PAGINAS POR 2
         if (cantidad_paginas % 2 == 0):
@@ -168,6 +169,7 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
     db = conexion()
     documento = db.get_collection('fotocopiadoras_'+ciudad).find()
     lista = []
+    print(dia+'!!!!!')
     # AL SER DOBLE FAZ SE DIVIDE LA CANTIDAD DE PAGINAS POR 2
     if simple_doble == 'doblefaz':
         if (cantidad_paginas % 2 == 0):
