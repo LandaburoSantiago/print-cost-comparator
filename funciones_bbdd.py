@@ -61,8 +61,13 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
         precio = float(i['precio_fotocopia_color'])*cantidad_paginas
         # FORMATEA EL NUMERO PARA QUE TENGA LA FORMA N.NN
         precio = "{0: .2f}".format(precio)
-        # SI EL DIA ES 7(DOMINGO) LA SITUACION SE PONE EN 'CERRADO' AUTOMATICAMENTE
-        if dia != 0:
+        # SI EL DIA ES 7(DOMINGO) LA SITUACION SE PONE EN 'CERRADO' AUTOMATICAMENTE Y LOS HORARIOS DE MANIANA
+        if dia == 0:
+            print('es domingo')
+            hora_a = i['hora_apertura_maniana']
+            hora_c = i['hora_cierre_maniana']
+            situacion = 'cerrado'
+        else:
             # SI NO ES DOMINGO SE PREGUNTA SI ES SABADO
             if dia == 6:
                 # SI ES SABADO SE PREGUNTA SI EL SABADO DE TARDE ABRE
@@ -134,12 +139,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
                     hora_a = i['hora_apertura_maniana']
                     hora_c = i['hora_cierre_maniana']
                     situacion = 'cerrado'
-        # SI EL DIA ES 7(DOMINGO) SE PONE LA SITUACION EN CERRADO Y LOS HORARIOS DE MANIANA
-        else:
-            print('es domingo')
-            hora_a = i['hora_apertura_maniana']
-            hora_c = i['hora_cierre_maniana']
-            situacion = 'cerrado'
+        
         # SE ARMA UN DICCIONARIO CON TODOS LOS CAMPOS
         diccionario = {
             'id': i['_id'],
