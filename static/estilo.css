@@ -593,7 +593,17 @@ html{
         margin-left: 35%;
         width: 800px;
       }
-
+      body{
+        background-color:#1b1b1b;
+      }
+  
+       .table-responsive-sm{
+            overflow:scroll;
+            height:250px;
+            width:1500px;
+            margin-top:120px;
+            background-color:white;
+      }
       .custom-control.custom-radio{
         color: white;
       }
@@ -603,10 +613,9 @@ html{
         margin-left: 200px;
         margin-top:-48px
       }
-
+    
       table{
-        position:absolute;
-        margin-top: 150px
+        position:relative;
       }
       tbody{
         background-color: white;
