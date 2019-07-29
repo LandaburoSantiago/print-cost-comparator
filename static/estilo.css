@@ -69,12 +69,16 @@ html{
             width:530px;
             heigth: 40%;
       }
+      .table-responsive-sm{
+            overflow:scroll;
+            height:400px;
+            width:530px;
+      }
       body{
             background-color:#1b1b1b;
       }
       table{
         position:relative;
-        
       }
       .mas_detalles{
             position:absolute;
@@ -804,3 +808,4 @@ html{
         margin-left:827px;
       }
 }
+
