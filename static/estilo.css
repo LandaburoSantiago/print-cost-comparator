@@ -66,12 +66,8 @@ html{
         margin-top:-48px
       }
       .table-responsive-sm{
-            width:530px;
-            heigth: 40%;
-      }
-      .table-responsive-sm{
             overflow:scroll;
-            height:400px;
+            height:390px;
             width:530px;
       }
       body{
