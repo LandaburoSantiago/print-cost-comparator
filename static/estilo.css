@@ -221,14 +221,13 @@ html{
 
       .alert.alert-primary{
         position: absolute;
-        margin-top: 100px;
         margin-left: 100px;
       }
 
       .btn.btn-outline-dark{
         position:absolute;
         margin-top:-46px;
-        margin-left: 15px;
+        margin-left:-150px;
       }
       .info-precio-color{
         margin-left: 220px;
