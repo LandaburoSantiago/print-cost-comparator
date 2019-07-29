@@ -62,14 +62,14 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
         precio = "{0: .2f}".format(precio)
         print(type(dia))
         # SI EL DIA ES 7(DOMINGO) LA SITUACION SE PONE EN 'CERRADO' AUTOMATICAMENTE Y LOS HORARIOS DE MANIANA
-        if dia == 0:
+        if dia == '0':
             print('es domingo')
             hora_a = i['hora_apertura_maniana']
             hora_c = i['hora_cierre_maniana']
             situacion = 'cerrado'
         else:
             # SI NO ES DOMINGO SE PREGUNTA SI ES SABADO
-            if dia == 6:
+            if dia == '6':
                 # SI ES SABADO SE PREGUNTA SI EL SABADO DE TARDE ABRE
                 if i['sabado_tarde'] == 'si':
                     # SI SABADO DE TARDE ABRE PREGUNTA SI ES DE MANIANA
@@ -184,9 +184,9 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
         # FORMATEA EL NUMERO PARA QUE TENGA LA FORMA N.NN
         precio = "{0: .2f}".format(precio)
         # SI EL DIA ES 7(DOMINGO) LA SITUACION SE PONE EN 'CERRADO' AUTOMATICAMENTE
-        if dia != 0:
+        if dia != '0':
             # SI NO ES DOMINGO SE PREGUNTA SI ES SABADO
-            if dia == 6:
+            if dia == '6':
                 # SI ES SABADO SE PREGUNTA SI EL SABADO DE TARDE ABRE
                 if i['sabado_tarde'] == 'si':
                     # SI SABADO DE TARDE ABRE PREGUNTA SI ES DE MANIANA
