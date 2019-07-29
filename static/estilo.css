@@ -43,7 +43,7 @@ html{
         position: absolute;
         margin-left: 180px;
       }
-
+   
       .btn.btn-success{
        position: absolute;
        margin-top: 5px;
@@ -65,10 +65,19 @@ html{
         margin-left: 200px;
         margin-top:-48px
       }
-
+      .table-responsive-sm{
+            width:530px;
+            heigth: 40%;
+      }
+      body{
+            background-color:#1b1b1b;
+      }
       table{
-        position:absolute;
-        margin-top: 150px
+        position:relative;
+        
+      }
+      .mas_detalles{
+            position:absolute;
       }
       tbody{
         background-color: white;
@@ -159,14 +168,6 @@ html{
         position: absolute;
         margin-left: 200px;
         margin-top:-48px
-      }
-
-      table{
-        position:absolute;
-        margin-top: 150px
-      }
-      tbody{
-        background-color: white;
       }
 
       .lblNumcopias{
@@ -262,9 +263,9 @@ html{
       }
       .rounded-pill{
         height:170px;
-        position:absolute;
-        margin-top: 450px;
-        margin-left:190px;
+        position:relative;
+        top: 550px;
+        left:190px;
       }
        
 }
@@ -282,7 +283,6 @@ html{
         width:230px;
         height:60px
       }
-
       .ciudad1{
         font-family:Oswald;
         margin-left:70%
@@ -332,7 +332,7 @@ html{
 
       table{
         position:absolute;
-        margin-top: 150px
+        margin-top: 150px;
       }
       tbody{
         background-color: white;
@@ -527,15 +527,12 @@ html{
       }
       .rounded-pill{
         height:170px;
-        position:absolute;
+        position: absolute;
         margin-top: 400px;
         margin-left:607px;
       }
 
 }
-
-
-
 
 @media screen and (max-device-width: 1980px) and (min-device-width: 1400px) {
        .navbar-brand{
@@ -806,6 +803,4 @@ html{
         margin-top: 460px;
         margin-left:827px;
       }
-
 }
-
