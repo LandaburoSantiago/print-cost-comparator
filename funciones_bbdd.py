@@ -47,7 +47,6 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
     db = conexion()
     documento = db.get_collection('fotocopiadoras_'+ciudad).find()
     lista = []
-    print(momento_dia)
     if simple_doble == 'doblefaz':
         # AL SER DOBLE FAZ SE DIVIDE LA CANTIDAD DE PAGINAS POR 2
         if (cantidad_paginas % 2 == 0):
@@ -175,7 +174,6 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
         else:
             cantidad_paginas = cantidad_paginas // 2
             cantidad_paginas += 1
-            print(cantidad_paginas)
     for i in documento:
         # CONVERTIR EL PRECIO DE LA FOTOCOPIA A FLOAT REALIZA EL CALCULO
         precio = float(i['precio_fotocopia_byn'])*cantidad_paginas
