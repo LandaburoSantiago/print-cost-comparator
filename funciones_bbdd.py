@@ -135,6 +135,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
                     situacion = 'cerrado'
         # SI EL DIA ES 7(DOMINGO) SE PONE LA SITUACION EN CERRADO Y LOS HORARIOS DE MANIANA
         else:
+            print('es domingo')
             hora_a = i['hora_apertura_maniana']
             hora_c = i['hora_cierre_maniana']
             situacion = 'cerrado'
@@ -158,7 +159,6 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
         lista.append(diccionario)
     # LA LISTA SE ORDENA POR EL CAMPO PRECIO_TOTAL
     lista.sort(key=lambda k: k['precio_total'])
-    print(lista)
     return lista
 
 
@@ -256,6 +256,7 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
                     situacion = 'cerrado'
         # SI EL DIA ES 7(DOMINGO) SE PONE LA SITUACION EN CERRADO Y LOS HORARIOS DE MANIANA
         else:
+            print('es domingo')
             hora_a = i['hora_apertura_maniana']
             hora_c = i['hora_cierre_maniana']
             situacion = 'cerrado'
@@ -279,7 +280,6 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
         lista.append(diccionario)
     # LA LISTA SE ORDENA POR EL CAMPO PRECIO_TOTAL
     lista.sort(key=lambda k: k['precio_total'])
-    print(lista)
     return lista
 
 
