@@ -102,21 +102,21 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
                         # Y LA SITUACION ES CERRADO
                         situacion = 'cerrado'
                     # SI EL SABADO DE TARDE NO ABRE
-                    elif sabado_tarde == 'no':
-                        # HACE LAS MISMAS PREGUNTAS PERO SOLAMENTE PARA EL MOMENTO DEL DIA DE MANIANA
-                        if momento_dia == 'maniana':
-                            hora_a = i['hora_apertura_maniana']
-                            hora_c = i['hora_cierre_maniana']
-                            if hora >= datetime.strptime(i['hora_apertura_maniana']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_maniana']+":00", "%X").time():
-                                situacion = 'abierto'
-                            else:
-                                situacion = 'cerrado'
+                else:
+                    # HACE LAS MISMAS PREGUNTAS PERO SOLAMENTE PARA EL MOMENTO DEL DIA DE MANIANA
+                    if momento_dia == 'maniana':
+                        hora_a = i['hora_apertura_maniana']
+                        hora_c = i['hora_cierre_maniana']
+                        if hora >= datetime.strptime(i['hora_apertura_maniana']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_maniana']+":00", "%X").time():
+                            situacion = 'abierto'
                         else:
-                            # SI NO ES DE MANIANA SE COLOCA LA SITUACION EN CERRADO Y LOS HORARIOS DE MANIANA
-                            print('cerrado de tarde')
-                            hora_a = i['hora_apertura_maniana']
-                            hora_c = i['hora_cierre_maniana']
                             situacion = 'cerrado'
+                    else:
+                        # SI NO ES DE MANIANA SE COLOCA LA SITUACION EN CERRADO Y LOS HORARIOS DE MANIANA
+                        print('cerrado de tarde')
+                        hora_a = i['hora_apertura_maniana']
+                        hora_c = i['hora_cierre_maniana']
+                        situacion = 'cerrado'
             # SI EL DIA NO ES SABADO
             else:
                 # SE HACEN LAS MISMAS PREGUNTAS PARA TODOS LOS MOMENTOS DEL DIA
