@@ -102,7 +102,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
                         # Y LA SITUACION ES CERRADO
                         situacion = 'cerrado'
                     # SI EL SABADO DE TARDE NO ABRE
-                    else:
+                    elif sabado_tarde == 'no':
                         # HACE LAS MISMAS PREGUNTAS PERO SOLAMENTE PARA EL MOMENTO DEL DIA DE MANIANA
                         if momento_dia == 'maniana':
                             hora_a = i['hora_apertura_maniana']
@@ -113,6 +113,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
                                 situacion = 'cerrado'
                         else:
                             # SI NO ES DE MANIANA SE COLOCA LA SITUACION EN CERRADO Y LOS HORARIOS DE MANIANA
+                            print('cerrado de tarde')
                             hora_a = i['hora_apertura_maniana']
                             hora_c = i['hora_cierre_maniana']
                             situacion = 'cerrado'
