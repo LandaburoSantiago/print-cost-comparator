@@ -292,13 +292,22 @@ html{
         font-family:Oswald;
         margin-left: 15%
       }
-
+      body{
+            background-color:#1b1b1b;
+      }
       .btn.btn-primary:hover{
         margin-top: 225px;
         border-color:#FF5722;
         transition: all 0.5s cubic-bezier(1, -0.1, 0.26, 0.29);
       }
-
+      
+      .table-responsive-sm{
+            overflow:scroll;
+            height:250px;
+            width:1364px;
+            margin-top:120px;
+            background-color:white;
+      }
 
       .custom-file{
         width:50%;
@@ -332,8 +341,7 @@ html{
       }
 
       table{
-        position:absolute;
-        margin-top: 150px;
+        position:relative;
       }
       tbody{
         background-color: white;
