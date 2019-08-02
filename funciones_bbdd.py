@@ -57,8 +57,6 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
     for i in documento:
         # CONVERTIR EL PRECIO DE LA FOTOCOPIA A FLOAT REALIZA EL CALCULO
         precio = float(i['precio_fotocopia_color'])*cantidad_paginas
-        # FORMATEA EL NUMERO PARA QUE TENGA LA FORMA N.NN
-        precio = "{0: .2f}".format(precio)
         print(type(precio))
         # SI EL DIA ES 0(DOMINGO) LA SITUACION SE PONE EN 'CERRADO' AUTOMATICAMENTE Y LOS HORARIOS DE MANIANA
         if dia == '0':
@@ -158,6 +156,9 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
         lista.append(diccionario)
     # LA LISTA SE ORDENA POR EL CAMPO PRECIO_TOTAL
     lista.sort(key=lambda k: k['precio_total'])
+    # FORMATEA EL NUMERO PARA QUE TENGA LA FORMA N.NN
+    for i in lista:
+        i[precio_total] = "{0: .2f}".format(i[precio_total])
     return lista
 
 
