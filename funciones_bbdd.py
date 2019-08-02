@@ -59,6 +59,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
         precio = float(i['precio_fotocopia_color'])*cantidad_paginas
         # FORMATEA EL NUMERO PARA QUE TENGA LA FORMA N.NN
         precio = "{0: .2f}".format(precio)
+        print(type(precio))
         # SI EL DIA ES 0(DOMINGO) LA SITUACION SE PONE EN 'CERRADO' AUTOMATICAMENTE Y LOS HORARIOS DE MANIANA
         if dia == '0':
             hora_a = i['hora_apertura_maniana']
