@@ -276,7 +276,7 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
     # LA LISTA SE ORDENA POR EL CAMPO PRECIO_TOTAL
     lista.sort(key=lambda k: k['precio_total'])
     # FORMATEA EL NUMERO PARA QUE TENGA LA FORMA N.NN
-    for i in listado:
+    for i in lista:
         i['precio_total'] = "{0: .2f}".format(i['precio_total'])
     return lista
 
