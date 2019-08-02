@@ -158,7 +158,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
     lista.sort(key=lambda k: k['precio_total'])
     # FORMATEA EL NUMERO PARA QUE TENGA LA FORMA N.NN
     for i in lista:
-        i[precio_total] = "{0: .2f}".format(i[precio_total])
+        i['precio_total'] = "{0: .2f}".format(i['precio_total'])
     return lista
 
 
