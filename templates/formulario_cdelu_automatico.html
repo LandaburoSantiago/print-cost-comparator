@@ -57,6 +57,14 @@
             document.getElementById("idSegundos").value = segundos;
             document.getElementById("idDia").value = dia;
         </script>
+        <script>
+            $('#customFile').on('change',function(){
+                //get the file name
+                var fileName = $(this).val();
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            })
+          </script>
           <button type="submit" class="btn btn-outline-success">Ver resultados</button>
       </form>
     </div>
