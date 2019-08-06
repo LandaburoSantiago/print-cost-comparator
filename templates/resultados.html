@@ -35,7 +35,7 @@
         <tbody>
             {% for elemento in listado %}
               {%if elemento['abierto_cerrado'] == 'abierto'%}
-                <form class="mas_detalles" action="https://proyecto-fotocopiadoras.herokuapp.com/mas_detalles" method="get">
+                <form class="mas_detalles" action="/mas_detalles" method="get">
                   <tr class="estado_abierto" data-toggle="tooltip" data-placement="top" title="Abierto">
                     <th scope="row">${{elemento['precio_total']}}</th>
                     <td>{{elemento['nombre']}}</td>
@@ -45,12 +45,12 @@
                     <input type="hidden" name="idCiudad" value="{{ciudad}}">
                     <input type="hidden" name="idFotocopiadora" value="{{elemento['id']}}">
                     <td>{{elemento['hora_apertura']}} a {{elemento['hora_cierre']}}
-                        <a style="text-decoration: none" href="https://proyecto-fotocopiadoras.herokuapp.com/mas_detalles"><button type="submit" data-toggle="tooltip" data-placement="left" title="Mas detalles" class="btn btn-secondary btn-sm">+</button></a>
+                        <a style="text-decoration: none" href="/mas_detalles"><button type="submit" data-toggle="tooltip" data-placement="left" title="Mas detalles" class="btn btn-secondary btn-sm">+</button></a>
                     </td>
                   </tr>
                 </form>
               {%else%}
-                <form class="mas_detalles" action="https://proyecto-fotocopiadoras.herokuapp.com/mas_detalles" method="get">
+                <form class="mas_detalles" action="/mas_detalles" method="get">
                   <tr class="estado_cerrado" data-toggle="tooltip" data-placement="top" title="Cerrado">
                     <th scope="row">${{elemento['precio_total']}}</th>
                     <td>{{elemento['nombre']}}</td>
@@ -60,7 +60,7 @@
                     <input type="hidden" name="idCiudad" value="{{ciudad}}">
                     <input type="hidden" name="idFotocopiadora" value="{{elemento['id']}}">
                     <td>{{elemento['hora_apertura']}} a {{elemento['hora_cierre']}}
-                        <a style="text-decoration: none" href="https://proyecto-fotocopiadoras.herokuapp.com/mas_detalles"><button type="submit" data-toggle="tooltip" data-placement="left" title="Mas detalles" class="btn btn-secondary btn-sm">+</button></a>
+                        <a style="text-decoration: none" href="/mas_detalles"><button type="submit" data-toggle="tooltip" data-placement="left" title="Mas detalles" class="btn btn-secondary btn-sm">+</button></a>
                     </td>
                   </tr>
                 </form>
