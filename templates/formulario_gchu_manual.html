@@ -39,9 +39,6 @@
               <label class="custom-control-label" for="customRadio4" >Doble faz</label>
             </div>
           </div>
-          <a style="text-decoration: none" href="/formulario_gchu_automatico">
-            <button type="button" name='btnManualgchu' value="gchu_manual" class="btn btn-outline-info">Ingresar el archivo</button>
-          </a>
           <input type="hidden" id="idHora" name="idHora">
           <input type="hidden" id="idMinutos" name="idMinutos">
           <input type="hidden" id="idSegundos" name="idSegundos">
@@ -59,7 +56,12 @@
             document.getElementById("idSegundos").value = segundos;
             document.getElementById("idDia").value = dia;
           </script>
-          <button type="submit" class="btn btn-outline-success">Ver resultados</button>
+          <div class="botones">
+            <a style="text-decoration: none" href="/formulario_gchu_automatico">
+              <button type="button" name='btnManualgchu' value="gchu_manual" class="btn btn-outline-info">Ingresar el archivo</button>
+            </a>
+            <button type="submit" class="btn btn-outline-success">Ver resultados</button>
+          </div>
       </form>
     </div>
   </body>
