@@ -1,3 +1,15 @@
 html{
   background-color: #1b1b1b;
 }
+
+// Dispositivos chicos (landscape phones, 576px and up)
+@media (min-width: 576px) {  }
+
+// Dispositivos medianos (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Dispositivos grandes (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// dispositivos muy grandes (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
