@@ -10,26 +10,21 @@ html{
     }
     .ciudad1{
       position:absolute;
-      top: 35%;
-      left:96%;
-      margin-left:-185px;
+      top: 15%;
+      left:50%;
+      margin-left: -25%
     }
     .ciudad2{
       position:absolute;
       top: 35%;
-      left:46%;
-      margin-left: -200px;
+      left:4%;
+      
     }
     .container{
       position: absolute;
       top: 50%;
       margin-top: -100px;
-      left: 6.5%;
       height: 137px;
-      width: 362px;
-    }
-    .custom-file{
-        width:100%
     }
     .radios1{
         color: white;
@@ -49,12 +44,13 @@ html{
     .botones_manual{
         position:relative;
         top: -40px;
+        margin-left: 16.68px;
     }
     .lblNumcopias{
         color:white;
     }
     .ingresar_numero{
-        width: 51%;
+        width: 57%;
         border-radius: 20px;
     }
     .btn.btn-outline-success{
