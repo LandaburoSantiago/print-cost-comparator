@@ -210,6 +210,7 @@ html{
   
   .table-responsive-sm{
       position: fixed;
+      overflow:scroll;
       top: 50%;
       margin-top: -110px;
       height: 290px;
@@ -345,6 +346,7 @@ html{
   
   .table-responsive-sm{
       position: fixed;
+      overflow:scroll;
       top: 50%;
       margin-top: -110px;
       height: 290px;
