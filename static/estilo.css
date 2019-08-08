@@ -270,7 +270,7 @@ html{
 }
 
 
-/* Pantallas grabdes */
+/* Pantallas grandes */
 @media (max-width: 1920px) and (min-width: 1600px) {
   .navbar-brand{
       position: relative;
@@ -282,18 +282,18 @@ html{
     font-family:Oswald;
     top: 35%;
     left:50%;
-    margin-left: -75px;
+    margin-left: -100px;
   }
   .ciudad2{
     position:absolute;
     font-family:Oswald;
     top: 50%;
     left:50%;
-    margin-left:-75px;     
+    margin-left:-100px;     
   }
   .btn.btn-primary{
-      height: 55px;
-      width: 150px;
+      height: 65px;
+      width: 200px;
       background-color:#212529;
       border-color:#28a745;
     }
