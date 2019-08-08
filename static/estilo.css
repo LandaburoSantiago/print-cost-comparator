@@ -132,6 +132,14 @@ html{
       .titulos-info{
         font-weight:bold;
       }
+      .miNombre{
+      position:absolute;
+      color:#464444;
+      top:85%;
+      left: 50%;
+      margin-left: -125.155px;
+      font-family: 'Indie Flower', cursive;
+    }
 }
 
 
@@ -268,6 +276,14 @@ html{
     .titulos-info{
       font-weight:bold;
     }
+    .miNombre{
+      position:absolute;
+      color:#464444;
+      top:85%;
+      left: 50%;
+      margin-left: -125.155px;
+      font-family: 'Indie Flower', cursive;
+    }
 }
 
 
@@ -403,5 +419,13 @@ html{
 
     .titulos-info{
       font-weight:bold;
+    }
+    .miNombre{
+      position:absolute;
+      color:#464444;
+      top:85%;
+      left: 50%;
+      margin-left: -125.155px;
+      font-family: 'Indie Flower', cursive;
     }
 }
