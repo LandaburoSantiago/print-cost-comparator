@@ -30,7 +30,7 @@ html{
       }
      .btn.btn-primary:hover{
         border-color:#FF5722;
-        transition: all 0.5s cubic-bezier(1, -0.1, 0.26, 0.29);
+        transition: all 0.4s cubic-bezier(0.4, 0, 1, 1);
       }
     .container{
       position: absolute;
@@ -164,7 +164,142 @@ html{
     }
  .btn.btn-primary:hover{
     border-color:#FF5722;
-    transition: all 0.5s cubic-bezier(1, -0.1, 0.26, 0.29);
+    transition: all 0.4s cubic-bezier(0.4, 0, 1, 1);
+  }
+  .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -180px;
+    margin-top: -100px;
+    height: 137px;
+    width:360px;
+  }
+  .custom-file{
+      width:100%;
+  }
+  .radios1{
+      color: white;
+      width:50%;
+  }
+  .radios2{
+      position:relative;
+      color:white;
+      width: 50%;
+      left: 50%;
+      top: -47px
+  }
+  .botones{
+      position:relative;
+      top: -40px;
+  }
+  .botones_manual{
+      position:relative;
+      top: -40px;
+  }
+  .lblNumcopias{
+      color:white;
+  }
+  .ingresar_numero{
+      width: 57.9%;
+      border-radius: 20px;
+  }
+  .btn.btn-outline-success{
+      width:139px;
+  }
+  
+  .table-responsive-sm{
+      position: fixed;
+      top: 50%;
+      margin-top: -110px;
+      height: 290px;
+      width:100%;
+      background-color: white;
+  }
+  .estado_cerrado:hover{
+    background-color: #e47070;
+    transition: all 0.5s ease;
+ }
+ .estado_abierto:hover{
+   background-color: #46ce76;
+   transition: all 0.5s ease;
+ }
+  .btn.btn-outline-dark{
+      position: absolute;
+      top: 9px;
+  }
+  .alert.alert-primary{
+      position: absolute;
+      top: 20%;
+      width: 400px;
+      left: 50%;
+      margin-left: -200px;
+  }
+  .info-precio-color{
+      margin-left: 222px;
+      margin-top: -40px;
+    }
+  .info-precio-byn{
+      margin-left: 305px;
+      margin-top: -40px;
+    }
+    .info-mail{
+      margin-left: 58px;
+      margin-top: -40px;
+    }
+
+    .info-telefono{
+      margin-left: 74px;
+      margin-top: -40px;
+    }
+
+    .info-direccion{
+      margin-left: 83px;
+      margin-top: -40px;
+    }
+
+    .info-sabado{
+      font-weight:bold;
+      margin-left: 153px;
+      margin-top: -40px;
+    }
+
+    .titulos-info{
+      font-weight:bold;
+    }
+}
+
+
+/* Pantallas grabdes */
+@media (max-width: 1920px) and (min-width: 1600px) {
+  .navbar-brand{
+      position: relative;
+      left: 50%;
+      margin-left: -82.27px;
+  }
+  .ciudad1{
+    position:absolute;
+    font-family:Oswald;
+    top: 35%;
+    left:50%;
+    margin-left: -75px;
+  }
+  .ciudad2{
+    position:absolute;
+    font-family:Oswald;
+    top: 50%;
+    left:50%;
+    margin-left:-75px;     
+  }
+  .btn.btn-primary{
+      height: 55px;
+      width: 150px;
+      background-color:#212529;
+      border-color:#28a745;
+    }
+ .btn.btn-primary:hover{
+    border-color:#FF5722;
+    transition: all 0.4s cubic-bezier(0.4, 0, 1, 1);
   }
   .container{
     position: absolute;
