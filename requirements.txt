@@ -10,4 +10,3 @@ gunicorn==19.7.1
 pymongo
 dnspython
 pypdf2
-werkzeug>=0.15.3
