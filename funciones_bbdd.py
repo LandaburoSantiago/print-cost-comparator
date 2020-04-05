@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+from firebase import firebase
 from bson.objectid import ObjectId
 from datetime import datetime, date, timedelta
 
@@ -29,10 +30,10 @@ def obtenerMomentoDia(hora):
 
 
 def conexion():
-    # cliente = MongoClient(host='localhost', port=27017)
-    # db = cliente.get_database('copia_barata')
-    client = MongoClient("mongodb+srv://Santi:proyectofotocopiadoras@cluster0-gs6ij.mongodb.net/test?retryWrites=true&w=majority")
-    db = client.fotocopiadoras
+    db = firebase.FirebaseApplication("https://proyecto-fotocopiadoras-bae45.firebaseio.com/", None)
+    # datos = db.get("https://proyecto-fotocopiadoras-bae45.firebaseio.com/fotocopiadoras/fotocopiadoras_cdelu", "")
+    # client = MongoClient("mongodb+srv://Santi:proyectofotocopiadoras@cluster0-gs6ij.mongodb.net/test?retryWrites=true&w=majority")
+    # db = client.fotocopiadoras
     return db
 
 
@@ -47,7 +48,7 @@ def guardar(documento):
 # y devuelve los datos procesados en una lista ordenada por el precio total
 def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
     db = conexion()
-    documento = db.get_collection('fotocopiadoras_'+ciudad).find()
+    documento = db.get("https://proyecto-fotocopiadoras-bae45.firebaseio.com/fotocopiadoras/fotocopiadoras_"+ciudad, "")
     print(type(documento))
     lista = []
     if simple_doble == 'doblefaz':
@@ -137,7 +138,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
                     hora_a = i['hora_apertura_maniana']
                     hora_c = i['hora_cierre_maniana']
                     situacion = 'cerrado'
-        
+
         # SE ARMA UN DICCIONARIO CON TODOS LOS CAMPOS
         diccionario = {
             'id': i['_id'],
@@ -168,7 +169,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
 # y devuelve los datos procesados en una lista ordenada por el precio total
 def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
     db = conexion()
-    documento = db.get_collection('fotocopiadoras_'+ciudad).find()
+    documento = db.get("https://proyecto-fotocopiadoras-bae45.firebaseio.com/fotocopiadoras/fotocopiadoras_"+ciudad, "")
     lista = []
     int(dia)
     # AL SER DOBLE FAZ SE DIVIDE LA CANTIDAD DE PAGINAS POR 2
