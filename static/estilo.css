@@ -140,14 +140,20 @@ html{
       margin-left: -125.155px;
       font-family: 'Indie Flower', cursive;
     }
+   h2{
+      position:relative;
+      left: 50%;
+      width: 95px;
+      margin-left:-47.5px;
+    }
     .mensaje_error_ciudad{
       position:absolute;
       color: white;
       font-family: 'Amatic SC', cursive;
       left: 50%;
-      margin-left: -89.64px;
+      margin-left: -224.1px;
       top: 50%;
-      margin-top:-29.5px;
+      margin-top:-51px;
     }
 }
 
@@ -293,14 +299,20 @@ html{
       margin-left: -125.155px;
       font-family: 'Indie Flower', cursive;
     }
+    h2{
+      position:relative;
+      left: 50%;
+      width: 95px;
+      margin-left:-47.5px;
+    }
     .mensaje_error_ciudad{
       position:absolute;
       color: white;
       font-family: 'Amatic SC', cursive;
       left: 50%;
-      margin-left: -89.64px;
+      margin-left: -224.1px;
       top: 50%;
-      margin-top:-29.5px;
+      margin-top:-51px;
     }
 }
 
@@ -446,14 +458,20 @@ html{
       margin-left: -125.155px;
       font-family: 'Indie Flower', cursive;
     }
+    h2{
+      position:relative;
+      left: 50%;
+      width: 95px;
+      margin-left:-47.5px;
+    }
     .mensaje_error_ciudad{
       position:absolute;
       color: white;
       font-family: 'Amatic SC', cursive;
       left: 50%;
-      margin-left: -89.64px;
+      margin-left: -224.1px;
       top: 50%;
-      margin-top:-29.5px;
+      margin-top:-51px;
     }
 }
 }
