@@ -254,7 +254,7 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
                     if hora >= datetime.strptime(i['hora_apertura_tarde']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_tarde']+":00", "%X").time():
                         situacion = 'abierto'
                     else:
-                        situacion = 'cerrado''id': i[_id],
+                        situacion = 'cerrado'
                 elif momento_dia == 'noche':
                     hora_a = i['hora_apertura_maniana']
                     hora_c = i['hora_cierre_maniana']
