@@ -13,3 +13,4 @@ pypdf2
 firebase
 python_jwt
 gcloud
+sseclient
