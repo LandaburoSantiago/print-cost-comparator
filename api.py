@@ -116,7 +116,8 @@ def mas_detalles():
         print(id)
         ciudad = request.args.get('idCiudad')
         # info = funciones_bbdd.get_one(id, ciudad)
-    return render_template('mas_detalles.html', info=info)
+        # , info=info
+    return render_template('mas_detalles.html')
 
 
 if __name__ == '__main__':
