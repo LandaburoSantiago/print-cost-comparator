@@ -285,6 +285,6 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
 
 def get_one(id, ciudad):
     db = conexion()
-    documento = db.get("https://proyecto-fotocopiadoras-bae45.firebaseio.com/fotocopiadoras/fotocopiadoras_"+ciudad/id, "")
+    documento = db.get("https://proyecto-fotocopiadoras-bae45.firebaseio.com/fotocopiadoras/fotocopiadoras_"+ciudad+"/"+id, "")
     documento['_id'] = str(documento['_id'])
     return documento
