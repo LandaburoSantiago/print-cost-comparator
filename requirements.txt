@@ -10,8 +10,4 @@ gunicorn==19.7.1
 pymongo
 dnspython
 pypdf2
-firebase
-python_jwt
-gcloud
-sseclient
-Crypto
+python-firebase
