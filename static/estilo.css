@@ -140,6 +140,9 @@ html{
       margin-left: -125.155px;
       font-family: 'Indie Flower', cursive;
     }
+    h1{
+      font-size: 30px;
+    }
    h2{
       position:relative;
       left: 50%;
@@ -151,7 +154,7 @@ html{
       color: white;
       font-family: 'Amatic SC', cursive;
       left: 50%;
-      margin-left: -224.1px;
+      margin-left: -168.08px;
       top: 50%;
       margin-top:-51px;
     }
