@@ -48,6 +48,7 @@ def guardar(documento):
 def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
     db = conexion()
     documento = db.get_collection('fotocopiadoras_'+ciudad).find()
+    print(type(documento))
     lista = []
     if simple_doble == 'doblefaz':
         # AL SER DOBLE FAZ SE DIVIDE LA CANTIDAD DE PAGINAS POR 2
