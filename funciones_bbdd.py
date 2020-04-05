@@ -141,6 +141,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
 
         # SE ARMA UN DICCIONARIO CON TODOS LOS CAMPOS
         diccionario = {
+            'id': i['_id'],
             'nombre': i['nombre'],
             'precio_total': precio,
             'precio_fotocopia_color': i['precio_fotocopia_color'],
@@ -253,13 +254,14 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
                     if hora >= datetime.strptime(i['hora_apertura_tarde']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_tarde']+":00", "%X").time():
                         situacion = 'abierto'
                     else:
-                        situacion = 'cerrado'
+                        situacion = 'cerrado''id': i[_id],
                 elif momento_dia == 'noche':
                     hora_a = i['hora_apertura_maniana']
                     hora_c = i['hora_cierre_maniana']
                     situacion = 'cerrado'
         # SE ARMA UN DICCIONARIO CON TODOS LOS CAMPOS
         diccionario = {
+            'id': i['_id'],
             'nombre': i['nombre'],
             'precio_total': precio,
             'precio_fotocopia_color': i['precio_fotocopia_color'],
