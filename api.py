@@ -87,7 +87,7 @@ def resultados():
                 f.save(os.path.join(app.config['UPLOAD_FOLDER'], nombre_archivo))
                 directorio_actual = os.getcwd()
                 os.chdir(os.path.join(app.config['UPLOAD_FOLDER']))
-                cantidad_paginas = contar_paginas(dir,nombre_archivo)
+                cantidad_paginas = contar_paginas(dir, nombre_archivo)
                 os.remove(nombre_archivo)
                 os.chdir(directorio_actual)
             else:
@@ -113,12 +113,11 @@ def resultados():
 def mas_detalles():
     if request.method == "GET":
         id = request.args.get('idFotocopiadora')
-        print(id)
         ciudad = request.args.get('idCiudad')
         info = funciones_bbdd.get_one(id, ciudad)
     return render_template('mas_detalles.html', info=info)
 
 
 if __name__ == '__main__':
-      port = int(os.environ.get('PORT', 5000))
-      app.run(host='0.0.0.0', port=port)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)

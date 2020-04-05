@@ -60,7 +60,10 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
             cantidad_paginas += 1
     for i in documento:
         # CONVERTIR EL PRECIO DE LA FOTOCOPIA A FLOAT REALIZA EL CALCULO
-        precio = float(i['precio_fotocopia_color'])*cantidad_paginas
+        if simple_doble  == 'doblefaz':
+            precio = float(i['precio_fotocopia_color_doble'])*cantidad_paginas
+        else:
+            precio = float(i['precio_fotocopia_color_simple'])*cantidad_paginas
         # SI EL DIA ES 0(DOMINGO) LA SITUACION SE PONE EN 'CERRADO' AUTOMATICAMENTE Y LOS HORARIOS DE MANIANA
         if dia == '0':
             hora_a = i['hora_apertura_maniana']
@@ -144,8 +147,10 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
             'id': i['_id'],
             'nombre': i['nombre'],
             'precio_total': precio,
-            'precio_fotocopia_color': i['precio_fotocopia_color'],
-            'precio_fotocopia_byn': i['precio_fotocopia_byn'],
+            'precio_fotocopia_color_simple': i['precio_fotocopia_color_simple'],
+            'precio_fotocopia_byn_simple': i['precio_fotocopia_byn_simple'],
+            'precio_fotocopia_color_doble': i['precio_fotocopia_color_doble'],
+            'precio_fotocopia_byn_doble': i['precio_fotocopia_byn_doble'],
             'mail': i['mail'],
             'telefono': i['telefono'],
             'direccion': i['direccion'],
@@ -181,7 +186,10 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
             cantidad_paginas += 1
     for i in documento:
         # CONVERTIR EL PRECIO DE LA FOTOCOPIA A FLOAT REALIZA EL CALCULO
-        precio = float(i['precio_fotocopia_byn'])*cantidad_paginas
+        if simple_doble == 'doblefaz':
+            precio = float(i['precio_fotocopia_byn_doble'])*cantidad_paginas
+        else:
+            precio = float(i['precio_fotocopia_byn_simple'])*cantidad_paginas
         # SI EL DIA ES 0(DOMINGO) LA SITUACION SE PONE EN 'CERRADO' AUTOMATICAMENTE
         if dia == '0':
             hora_a = i['hora_apertura_maniana']
@@ -264,8 +272,10 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
             'id': i['_id'],
             'nombre': i['nombre'],
             'precio_total': precio,
-            'precio_fotocopia_color': i['precio_fotocopia_color'],
-            'precio_fotocopia_byn': i['precio_fotocopia_byn'],
+            'precio_fotocopia_color_simple': i['precio_fotocopia_color_simple'],
+            'precio_fotocopia_byn_simple': i['precio_fotocopia_byn_simple'],
+            'precio_fotocopia_color_doble': i['precio_fotocopia_color_doble'],
+            'precio_fotocopia_byn_doble': i['precio_fotocopia_byn_doble'],
             'mail': i['mail'],
             'telefono': i['telefono'],
             'direccion': i['direccion'],
@@ -288,6 +298,4 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
 def get_one(id, ciudad):
     db = conexion()
     documento = db.get("https://proyecto-fotocopiadoras-bae45.firebaseio.com/fotocopiadoras/fotocopiadoras_"+ciudad+"/"+id, "")
-    print(id + '!!!!!!!!!!!!!!')
-    print(documento)
     return documento
