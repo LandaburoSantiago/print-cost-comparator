@@ -168,7 +168,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
 # y devuelve los datos procesados en una lista ordenada por el precio total
 def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
     db = conexion()
-    documento = db.get("https://proyecto-fotocopiadoras-bae45.firebaseio.com/fotocopiadoras/fotocopiadoras_"+ciudad, "")
+    documento = db.get("https://proyecto-fotocopiadoras-bae45.firebaseio.com/fotocopiadoras/fotocopiadoras_gualeguaychu", "")
     lista = []
     int(dia)
     # AL SER DOBLE FAZ SE DIVIDE LA CANTIDAD DE PAGINAS POR 2
