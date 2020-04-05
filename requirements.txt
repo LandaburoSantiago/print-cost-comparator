@@ -11,3 +11,4 @@ pymongo
 dnspython
 pypdf2
 firebase
+python_jwt
