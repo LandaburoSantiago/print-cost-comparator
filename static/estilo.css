@@ -11,7 +11,7 @@ html{
         margin-left: -82.27px;
     }
     .ciudad1{
-      position:absolute; 
+      position:absolute;
       font-family:Oswald;
       top: 35%;
       left:50%;
@@ -22,7 +22,7 @@ html{
       font-family:Oswald;
       top: 50%;
       left:50%;
-      margin-left:-40.89px;     
+      margin-left:-40.89px;
     }
     .btn.btn-primary{
         background-color:#212529;
@@ -73,7 +73,7 @@ html{
     .btn.btn-outline-success{
         width:139px;
     }
-    
+
     .table-responsive-sm{
         position: fixed;
         top: 50%;
@@ -140,6 +140,9 @@ html{
       margin-left: -125.155px;
       font-family: 'Indie Flower', cursive;
     }
+    .mensaje_error_ciudad{
+      font-family: 'Amatic SC', cursive;
+    }
 }
 
 
@@ -162,7 +165,7 @@ html{
     font-family:Oswald;
     top: 50%;
     left:50%;
-    margin-left:-75px;     
+    margin-left:-75px;
   }
   .btn.btn-primary{
       height: 55px;
@@ -215,7 +218,7 @@ html{
   .btn.btn-outline-success{
       width:139px;
   }
-  
+
   .table-responsive-sm{
       position: fixed;
       overflow:scroll;
@@ -284,6 +287,9 @@ html{
       margin-left: -125.155px;
       font-family: 'Indie Flower', cursive;
     }
+    .mensaje_error_ciudad{
+      font-family: 'Amatic SC', cursive;
+    }
 }
 
 
@@ -306,7 +312,7 @@ html{
     font-family:Oswald;
     top: 50%;
     left:50%;
-    margin-left:-100px;     
+    margin-left:-100px;
   }
   .btn.btn-primary{
       height: 65px;
@@ -359,7 +365,7 @@ html{
   .btn.btn-outline-success{
       width:139px;
   }
-  
+
   .table-responsive-sm{
       position: fixed;
       overflow:scroll;
@@ -427,5 +433,8 @@ html{
       left: 50%;
       margin-left: -125.155px;
       font-family: 'Indie Flower', cursive;
+    }
+    .mensaje_error_ciudad{
+      font-family: 'Amatic SC', cursive;
     }
 }
