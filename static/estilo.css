@@ -322,12 +322,23 @@ html{
       position: absolute;
       top: 9px;
   }
-  .alert.alert-primary{
-      position: absolute;
-      top: 20%;
-      width: 400px;
-      left: 50%;
-      margin-left: -200px;
+  .accordion{
+    position: absolute;
+    width: 450px;
+    height: 500px;
+    top: 15%;
+    left: 50%;
+    margin-left: -225px;
+  }
+  .btn.btn-link{
+    left: 50%;
+    width:200px;
+    margin-left: -50px;
+  }
+  .btn.btn-link.collapsed{
+    left: 50%;
+    width:200px;
+    margin-left: -50px;
   }
   .info-precio-color{
       margin-left: 222px;
@@ -357,7 +368,15 @@ html{
       margin-left: 153px;
       margin-top: -40px;
     }
-
+    .Titulo{
+      position:absolute;
+      width: 200px;
+      left: 50%;
+      margin-left: -100px;
+      font-family: Oswald;
+      color: white;
+      background-color: #1b1b1b;
+    }
     .titulos-info{
       font-weight:bold;
     }
