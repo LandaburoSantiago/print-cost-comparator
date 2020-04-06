@@ -26,7 +26,7 @@
           <tr>
             <th scope="col">Precio total</th>
             <th scope="col">Fotocopiadora</th>
-            <th scope="col">Horario</th>
+            <th scope="col">Direccion</th>
             <th scope="col">...</th>
           </tr>
         </thead>
@@ -37,9 +37,10 @@
                   <tr class="estado_abierto" data-toggle="tooltip" data-placement="top" title="Abierto">
                     <th scope="row">${{elemento['precio_total']}}</th>
                     <td>{{elemento['nombre']}}</td>
+                    <td>{{elemento['direccion']}}</td>
                     <input type="hidden" name="idCiudad" value="{{ciudad}}">
                     <input type="hidden" name="idFotocopiadora" value="{{elemento['id']}}">
-                    <td>{{elemento['hora_apertura']}} a {{elemento['hora_cierre']}}</td>
+                    <!-- <td>{{elemento['hora_apertura']}} a {{elemento['hora_cierre']}}</td> -->
                     <td><a style="text-decoration: none" href="/mas_detalles"><button type="submit" data-toggle="tooltip" data-placement="left" title="Mas detalles" class="btn btn-secondary btn-sm">+</button></a></td>
                   </tr>
                 </form>
@@ -48,9 +49,10 @@
                   <tr class="estado_cerrado" data-toggle="tooltip" data-placement="top" title="Cerrado">
                     <th scope="row">${{elemento['precio_total']}}</th>
                     <td>{{elemento['nombre']}}</td>
+                    <td>{{elemento['direccion']}}</td>
                     <input type="hidden" name="idCiudad" value="{{ciudad}}">
                     <input type="hidden" name="idFotocopiadora" value="{{elemento['id']}}">
-                    <td>{{elemento['hora_apertura']}} a {{elemento['hora_cierre']}}</td>
+                    <!-- <td>{{elemento['hora_apertura']}} a {{elemento['hora_cierre']}}</td> -->
                     <td><a style="text-decoration: none" href="/mas_detalles"><button type="submit" data-toggle="tooltip" data-placement="left" title="Mas detalles" class="btn btn-secondary btn-sm">+</button></a></td>
                   </tr>
                 </form>
