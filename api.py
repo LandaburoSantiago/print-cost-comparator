@@ -29,7 +29,7 @@ def menuc():
 
 @app.route('/librerias_gchu', methods=['GET', 'POST'])
 def librerias_gchu():
-    if request.method == "GET":
+    if request.method == "POST":
         hora = request.form['idHora']
         minutos = request.form['idMinutos']
         segundos = request.form['idSegundos']
