@@ -137,14 +137,22 @@ html{
     width:200px;
     margin-left: -50px;
   }
-  .info-precio-color{
+  .info-precio-color-simple{
       margin-left: 179px;
       margin-top: -40px;
     }
-  .info-precio-byn{
+  .info-precio-byn-simple{
       margin-left: 265px;
       margin-top: -40px;
     }
+    .info-precio-color-simple-doble{
+        margin-left: 179px;
+        margin-top: -40px;
+      }
+    .info-precio-byn-simple-doble{
+        margin-left: 265px;
+        margin-top: -40px;
+      }
     .info-mail{
       margin-left: 58px;
       margin-top: -40px;
@@ -357,14 +365,22 @@ html{
     width:200px;
     margin-left: -50px;
   }
-  .info-precio-color{
+  .info-precio-color-simple{
       margin-left: 179px;
       margin-top: -40px;
     }
-  .info-precio-byn{
+  .info-precio-byn-simple{
       margin-left: 265px;
       margin-top: -40px;
     }
+    .info-precio-color-simple-doble{
+        margin-left: 179px;
+        margin-top: -40px;
+      }
+    .info-precio-byn-simple-doble{
+        margin-left: 265px;
+        margin-top: -40px;
+      }
     .info-mail{
       margin-left: 58px;
       margin-top: -40px;
@@ -575,14 +591,22 @@ html{
     width:200px;
     margin-left: -50px;
   }
-  .info-precio-color{
+  .info-precio-color-simple{
       margin-left: 179px;
       margin-top: -40px;
     }
-  .info-precio-byn{
+  .info-precio-byn-simple{
       margin-left: 265px;
       margin-top: -40px;
     }
+    .info-precio-color-simple-doble{
+        margin-left: 179px;
+        margin-top: -40px;
+      }
+    .info-precio-byn-simple-doble{
+        margin-left: 265px;
+        margin-top: -40px;
+      }
     .info-mail{
       margin-left: 58px;
       margin-top: -40px;
