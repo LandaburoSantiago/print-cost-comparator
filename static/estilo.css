@@ -139,7 +139,7 @@ html{
     position: absolute;
     width: 350px;
     height: 500px;
-    top: 27%;
+    top: 30%;
     left: 50%;
     margin-left: -175px;
   }
@@ -216,7 +216,7 @@ html{
       .miNombre{
       position:absolute;
       color:#464444;
-      top:85%;
+      top: 125%;
       left: 50%;
       margin-left: -125.155px;
       font-family: 'Indie Flower', cursive;
