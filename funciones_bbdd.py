@@ -146,7 +146,7 @@ def listar(ciudad, momento_dia, hora, dia):
         }
         # LOS DICCIONARIOS ARMADOS SE GUARDAN EN UNA LISTA
         lista.append(diccionario)
-        return lista
+    return lista
 
 
 # recibe como parametro cantidad_paginas y ciudad hace una consulta a la base de datos
