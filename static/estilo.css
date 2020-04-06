@@ -139,7 +139,7 @@ html{
     position: absolute;
     width: 350px;
     height: 500px;
-    top: 15%;
+    top: 19%;
     left: 50%;
     margin-left: -175px;
   }
@@ -506,6 +506,9 @@ html{
        width: 20%;
        left: 45%;
        margin-left: 5px;
+    }
+    .alert.alert-warning{
+      height: 40px;
     }
 }
 
