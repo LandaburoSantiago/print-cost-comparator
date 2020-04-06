@@ -40,7 +40,7 @@
                     <th scope="row">${{elemento['precio_total']}}</th>
                     <td>{{elemento['nombre']}}</td>
                     <td>{{elemento['direccion']}}</td>
-                    <td>{{elemento['mail']}}</td>
+                    <td><a href="mailto:{{elemento['mail']}}">{{elemento['mail']}}</a></td>
                     <td>{{elemento['telefono']}}</td>
                     <input type="hidden" name="idCiudad" value="{{ciudad}}">
                     <input type="hidden" name="idFotocopiadora" value="{{elemento['id']}}">
@@ -54,7 +54,7 @@
                     <th scope="row">${{elemento['precio_total']}}</th>
                     <td>{{elemento['nombre']}}</td>
                     <td>{{elemento['direccion']}}</td>
-                    <td>{{elemento['mail']}}</td>
+                    <td><a href="mailto:{{elemento['mail']}}">{{elemento['mail']}}</a></td>
                     <td>{{elemento['telefono']}}</td>
                     <input type="hidden" name="idCiudad" value="{{ciudad}}">
                     <input type="hidden" name="idFotocopiadora" value="{{elemento['id']}}">
