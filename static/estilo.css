@@ -182,6 +182,32 @@ html{
     left:50%;
     margin-left:-75px;
   }
+  .btnCalculadora{
+    position:absolute;
+    font-family:Oswald;
+    top: 50%;
+    left: 25%;
+    margin-left: -92.165px;
+    margin-top: -27.5px;
+  }
+  .btnLbirerias{
+    position:absolute;
+    font-family:Oswald;
+    font-sizepx;
+    top: 50%;
+    left: 75%;
+    margin-left: -89.045px;
+    margin-top: -27.5px;
+  }
+  .btn.btn-default{
+    color: white;
+    border-color: #207572;
+    height: 55px;
+  }
+  .btn.btn-default:hover{
+    border-color:#31f974;
+    transition: all 0.4s cubic-bezier(0.4, 0, 1, 1);
+  }
   .btn.btn-primary{
       height: 55px;
       width: 150px;
