@@ -21,17 +21,64 @@
     <a href="javascript:history.back()"><button type="button" class="btn btn-outline-dark">ATRAS</button></a>
 </head>
 <body>
-  <div class="alert alert-primary" role="alert">
-    <h5 class="alert-titulo">{{info['nombre']}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Horarios: {{info['hora_apertura_maniana']}} a {{info['hora_cierre_maniana']}} y {{info['hora_apertura_tarde']}} a {{info['hora_cierre_maniana']}}</h6>
-    <p class="titulos-info">Precio de la fotocopia a color simple:</p><p class="info-precio-color">{{info['precio_fotocopia_color_simple']}}</p>
-    <p class="titulos-info">Precio de la fotocopia en blanco y negro simple:</p><p class="info-precio-byn">{{info['precio_fotocopia_byn_simple']}}</p>
-    <p class="titulos-info">Precio de la fotocopia a color doblefaz:</p><p class="info-precio-color">{{info['precio_fotocopia_color_doble']}}</p>
-    <p class="titulos-info">Precio de la fotocopia en blanco y negro dbolefaz:</p><p class="info-precio-byn">{{info['precio_fotocopia_byn_doble']}}</p>
-    <p class="titulos-info">E-Mail:</p><p class="info-mail"><a href="mailto:{{info['mail']}}">{{info['mail']}}</a></p>
-    <p class="titulos-info">Telefono:</p><p class="info-telefono">{{info['telefono']}}</p>
-    <p class="titulos-info">Direccion:</p><p class="info-direccion">{{info['direccion']}}</p>
-    <p class="titulos-info">El sabado a la tarde</p><p class="info-sabado">{{info['sabado_tarde']}} abre</p>
+  <div class="Titulo">
+      <h5 class="alert-titulo">{{info['nombre']}}</h5>
   </div>
+  <div class="accordion" id="accordionExample">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Infomración de contacto
+          </button>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <p class="titulos-info">E-Mail:</p><p class="info-mail"><a href="mailto:{{info['mail']}}">{{info['mail']}}</a></p>
+          <p class="titulos-info">Telefono:</p><p class="info-telefono">{{info['telefono']}}</p>
+          <p class="titulos-info">Direccion:</p><p class="info-direccion">{{info['direccion']}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Precios
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <p class="titulos-info">Precio de la fotocopia a color simple:</p><p class="info-precio-color">{{info['precio_fotocopia_color_simple']}}</p>
+          <p class="titulos-info">Precio de la fotocopia en blanco y negro simple:</p><p class="info-precio-byn">{{info['precio_fotocopia_byn_simple']}}</p>
+          <p class="titulos-info">Precio de la fotocopia a color doblefaz:</p><p class="info-precio-color">{{info['precio_fotocopia_color_doble']}}</p>
+          <p class="titulos-info">Precio de la fotocopia en blanco y negro dbolefaz:</p><p class="info-precio-byn">{{info['precio_fotocopia_byn_doble']}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Horario de atención
+          </button>
+        </h2>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Horarios: {{info['hora_apertura_maniana']}} a {{info['hora_cierre_maniana']}} y {{info['hora_apertura_tarde']}} a {{info['hora_cierre_maniana']}}</h6>
+
+
+          <p class="titulos-info">El sabado a la tarde</p><p class="info-sabado">{{info['sabado_tarde']}} abre</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="alert alert-primary" role="alert">
+
+
+  </div> -->
 </body>
 </html>
