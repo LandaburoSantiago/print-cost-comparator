@@ -45,7 +45,7 @@ def librerias_gchu():
         print('!!!!!!!!!!!!!!!!!!!!!!')
         listado = funciones_bbdd.listar('gualeguaychu', momento_dia, hora, dia)
         print(listado)
-    return render_template('librerias_gchu.html', listado=listado, ciudad='gualeguaychu')
+        return render_template('librerias_gchu.html', listado=listado, ciudad='gualeguaychu')
 
 
 @app.route('/librerias_cdelu')
