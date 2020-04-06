@@ -34,6 +34,7 @@ def librerias_gchu():
         minutos = request.form['idMinutos']
         segundos = request.form['idSegundos']
         dia = request.form['idDia']
+        ciudad = request.form['city']
         str(hora)
         str(minutos)
         str(segundos)
@@ -42,10 +43,9 @@ def librerias_gchu():
         hora_formateada = funciones_bbdd.obtenerHoraFormateada(hora, minutos, segundos)
         hora = datetime.strptime(hora_formateada, "%X").time()
         momento_dia = funciones_bbdd.obtenerMomentoDia(hora)
-        print('!!!!!!!!!!!!!!!!!!!!!!')
         listado = funciones_bbdd.listar('gualeguaychu', momento_dia, hora, dia)
         print(listado)
-        return render_template('librerias_gchu.html', listado=listado, ciudad='gualeguaychu')
+        return render_template('librerias_gchu.html', listado=listado, ciudad=ciudad)
 
 
 @app.route('/librerias_cdelu')
