@@ -5,13 +5,13 @@ html{
 
 /* Mobile */
 @media (max-width: 460px) and (min-width: 320px) {
-    body::-webkit-scrollbar{
+   body::-webkit-scrollbar{
       background-color:#1b1b1b;
       height: 5px;
       width: 5px;
     }
     body::-webkit-scrollbar-thumb{
-      background-color:#d89e10;
+      background-color:#e29b9b;
       width: 3px;
       height: 3px;
       border-radius: 10px;
