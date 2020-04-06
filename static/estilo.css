@@ -103,9 +103,25 @@ html{
     .table-responsive-sm{
         position: fixed;
         top: 50%;
+        overflow-y: scroll;
         margin-top: -145px;
         height: 290px;
         background-color: white;
+    }
+    .table-responsive-sm::-webkit-scrollbar{
+      background-color:#1b1b1b;
+      height: 5px;
+      width: 5px;
+    }
+    .table-responsive-sm::-webkit-scrollbar-corner{
+      background-color:#1b1b1b;
+    }
+    .table-responsive-sm::-webkit-scrollbar-thumb{
+      background-color:#d89e10;
+      width: 3px;
+      height: 3px;
+      border-radius: 10px;
+
     }
     .estado_cerrado:hover{
       background-color: #e47070;
@@ -335,6 +351,19 @@ html{
       width:100%;
       background-color: white;
   }
+  .table-responsive-sm::-webkit-scrollbar{
+      background-color:#1b1b1b;
+      height: 5px;
+      width: 5px;
+    }
+    .table-responsive-sm::-webkit-scrollbar-corner{
+      background-color:#1b1b1b;
+    }
+    .table-responsive-sm::-webkit-scrollbar-thumb{
+      background-color:#d89e10;
+      border-radius: 30px;
+
+    }
   .estado_cerrado:hover{
     background-color: #e47070;
     transition: all 0.5s ease;
@@ -561,6 +590,19 @@ html{
       width:100%;
       background-color: white;
   }
+  .table-responsive-sm::-webkit-scrollbar{
+      background-color:#1b1b1b;
+      height: 5px;
+      width: 5px;
+    }
+    .table-responsive-sm::-webkit-scrollbar-corner{
+      background-color:#1b1b1b;
+    }
+    .table-responsive-sm::-webkit-scrollbar-thumb{
+      background-color:#d89e10;
+      border-radius: 30px;
+
+    }
   .estado_cerrado:hover{
     background-color: #e47070;
     transition: all 0.5s ease;
