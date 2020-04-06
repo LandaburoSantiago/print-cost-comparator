@@ -29,6 +29,20 @@ def menuc():
 
 @app.route('/librerias_gchu')
 def librerias_gchu():
+    hora = request.form['idHora']
+    minutos = request.form['idMinutos']
+    segundos = request.form['idSegundos']
+    dia = request.form['idDia']
+    str(hora)
+    str(minutos)
+    str(segundos)
+    int(dia)
+    print(dia)
+    hora_formateada = funciones_bbdd.obtenerHoraFormateada(hora, minutos, segundos)
+    hora = datetime.strptime(hora_formateada, "%X").time()
+    momento_dia = funciones_bbdd.obtenerMomentoDia(hora)
+    funciones_bbdd.listar('gualeguaychu')
+    funciones_bbdd.listar('gualeguaychu', momento_dia, hora, dia)
     return render_template('librerias_gchu.html')
 
 
