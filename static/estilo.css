@@ -184,6 +184,21 @@ html{
       top: 50%;
       margin-top:-51px;
     }
+    .contenedor-imagenes{
+      width: 255px;
+    }
+    .imgInsta{
+      position:absolute;
+       width: 20%;
+       left: 45%;
+       margin-left: -51px;
+    }
+    .imgGit{
+      position:absolute;
+       width: 20%;
+       left: 45%;
+       margin-left: 5px;
+    }
 }
 
 
@@ -349,6 +364,7 @@ html{
     .miNombre{
       position:absolute;
       color:#464444;
+      width: 255px;
       top:85%;
       left: 50%;
       margin-left: -125.155px;
@@ -368,6 +384,21 @@ html{
       margin-left: -224.1px;
       top: 50%;
       margin-top:-51px;
+    }
+    .contenedor-imagenes{
+      width: 255px;
+    }
+    .imgInsta{
+      position:absolute;
+       width: 20%;
+       left: 45%;
+       margin-left: -51px;
+    }
+    .imgGit{
+      position:absolute;
+       width: 20%;
+       left: 45%;
+       margin-left: 5px;
     }
 }
 
@@ -553,6 +584,21 @@ html{
       margin-left: -224.1px;
       top: 50%;
       margin-top:-51px;
+    }
+    .contenedor-imagenes{
+      width: 255px;
+    }
+    .imgInsta{
+      position:absolute;
+       width: 20%;
+       left: 45%;
+       margin-left: -51px;
+    }
+    .imgGit{
+      position:absolute;
+       width: 20%;
+       left: 45%;
+       margin-left: 5px;
     }
 }
 }
