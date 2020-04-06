@@ -260,7 +260,6 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
                     situacion = 'cerrado'
         # SE ARMA UN DICCIONARIO CON TODOS LOS CAMPOS
         diccionario = {
-            'id': i['_id'],
             'nombre': i['nombre'],
             'precio_total': precio,
             'precio_fotocopia_color': i['precio_fotocopia_color'],
