@@ -19,7 +19,7 @@ def inicio():
 
 @app.route('/menug')
 def menug():
-    return render_template('menu.html')
+    return render_template('menug.html')
 
 
 @app.route('/menuc')
