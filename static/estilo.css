@@ -24,6 +24,32 @@ html{
       left:50%;
       margin-left:-40.89px;
     }
+    .btnCalculadora{
+    position:absolute;
+    font-family:Oswald;
+    top: 40%;
+    left: 25%;
+    margin-left: -76.385px;
+    margin-top: -27.5px;
+  }
+  .btnLbirerias{
+    position:absolute;
+    font-family:Oswald;
+    font-sizepx;
+    top: 40%;
+    left: 75%;
+    margin-left: -75.085px;
+    margin-top: -27.5px;
+  }
+  .btn.btn-default{
+    color: white;
+    border-color: #207572;
+    height: 55px;
+  }
+  .btn.btn-default:hover{
+    border-color:#31f974;
+    transition: all 0.4s cubic-bezier(0.4, 0, 1, 1);
+  }
     .btn.btn-primary{
         background-color:#212529;
         border-color:#28a745;
@@ -366,6 +392,32 @@ html{
     top: 50%;
     left:50%;
     margin-left:-100px;
+  }
+  .btnCalculadora{
+    position:absolute;
+    font-family:Oswald;
+    top: 50%;
+    left: 25%;
+    margin-left: -92.165px;
+    margin-top: -27.5px;
+  }
+  .btnLbirerias{
+    position:absolute;
+    font-family:Oswald;
+    font-sizepx;
+    top: 50%;
+    left: 75%;
+    margin-left: -89.045px;
+    margin-top: -27.5px;
+  }
+  .btn.btn-default{
+    color: white;
+    border-color: #207572;
+    height: 55px;
+  }
+  .btn.btn-default:hover{
+    border-color:#31f974;
+    transition: all 0.4s cubic-bezier(0.4, 0, 1, 1);
   }
   .btn.btn-primary{
       height: 65px;
