@@ -1,10 +1,69 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{url_for('static', filename = 'estilo.css')}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+    <title>sin titulo</title>
+    {% include 'barra_navegacion.html' %}
+    {% include 'hecho_por.html' %}
   </head>
   <body>
-      NADA
+    <div class="table-responsive-sm">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Fotocopiadora</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Mail</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Horario</th>
+            <th scope="col">...</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for elemento in listado %}
+              {%if elemento['abierto_cerrado'] == 'abierto'%}
+                <form class="mas_detalles" action="/mas_detalles" method="get">
+                  <tr class="estado_abierto" data-toggle="tooltip" data-placement="top" title="Abierto">
+                    <th scope="row">${{elemento['precio_total']}}</th>
+                    <td>{{elemento['nombre']}}</td>
+                    <td>{{elemento['direccion']}}</td>
+                    <td>{{elemento['mail']}}</td>
+                    <td>{{elemento['telefono']}}</td>
+                    <input type="hidden" name="idCiudad" value="{{ciudad}}">
+                    <input type="hidden" name="idFotocopiadora" value="{{elemento['id']}}">
+                    <td>{{elemento['hora_apertura']}} a {{elemento['hora_cierre']}}</td>
+                    <td><a style="text-decoration: none" href="/mas_detalles"><button type="submit" data-toggle="tooltip" data-placement="left" title="Mas detalles" class="btn btn-secondary btn-sm">+</button></a></td>
+                  </tr>
+                </form>
+              {%else%}
+                <form class="mas_detalles" action="/mas_detalles" method="get">
+                  <tr class="estado_cerrado" data-toggle="tooltip" data-placement="top" title="Cerrado">
+                    <td>{{elemento['nombre']}}</td>
+                    <td>{{elemento['direccion']}}</td>
+                    <td>{{elemento['mail']}}</td>
+                    <td>{{elemento['telefono']}}</td>
+                    <input type="hidden" name="idCiudad" value="{{ciudad}}">
+                    <input type="hidden" name="idFotocopiadora" value="{{elemento['id']}}">
+                    <td>{{elemento['hora_apertura']}} a {{elemento['hora_cierre']}}</td>
+                    <td><a style="text-decoration: none" href="/mas_detalles"><button type="submit" data-toggle="tooltip" data-placement="left" title="Mas detalles" class="btn btn-secondary btn-sm">+</button></a></td>
+                  </tr>
+                </form>
+              {%endif%}
+            {% endfor %}
+        </tbody>
+      </table>
+    </div>
   </body>
 </html>
