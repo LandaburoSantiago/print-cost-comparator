@@ -31,7 +31,6 @@
               {%if elemento['abierto_cerrado'] == 'abierto'%}
                 <form class="mas_detalles" action="/mas_detalles" method="get">
                   <tr class="estado_abierto" data-toggle="tooltip" data-placement="top" title="Abierto">
-                    <th scope="row">${{elemento['precio_total']}}</th>
                     <td>{{elemento['nombre']}}</td>
                     <td>{{elemento['direccion']}}</td>
                     <td><a href="mailto:{{elemento['mail']}}">{{elemento['mail']}}</a></td>

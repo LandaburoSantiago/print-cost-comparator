@@ -18,7 +18,7 @@
     <title>sin titulo</title>
     {% include 'barra_navegacion.html' %}
     {% include 'hecho_por.html' %}
-    <a href="javascript:history.back()"><button type="button" class="btn btn-outline-dark">ATRAS</button></a>
+    <a href="javascript:history.back()"><button type="button" class="btn b  tn-outline-dark">ATRAS</button></a>
 </head>
 <body>
   <div class="alert alert-primary" role="alert">
@@ -28,7 +28,7 @@
     <p class="titulos-info">Precio de la fotocopia en blanco y negro simple:</p><p class="info-precio-byn">{{info['precio_fotocopia_byn_simple']}}</p>
     <p class="titulos-info">Precio de la fotocopia a color doblefaz:</p><p class="info-precio-color">{{info['precio_fotocopia_color_doble']}}</p>
     <p class="titulos-info">Precio de la fotocopia en blanco y negro dbolefaz:</p><p class="info-precio-byn">{{info['precio_fotocopia_byn_doble']}}</p>
-    <p class="titulos-info">E-Mail:</p><p class="info-mail">{{info['mail']}}</p>
+    <p class="titulos-info">E-Mail:</p><p class="info-mail"><a href="mailto:{{info['mail']}}">{{info['mail']}}</a></p>
     <p class="titulos-info">Telefono:</p><p class="info-telefono">{{info['telefono']}}</p>
     <p class="titulos-info">Direccion:</p><p class="info-direccion">{{info['direccion']}}</p>
     <p class="titulos-info">El sabado a la tarde</p><p class="info-sabado">{{info['sabado_tarde']}} abre</p>
