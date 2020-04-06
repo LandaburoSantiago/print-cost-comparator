@@ -102,7 +102,7 @@ def resultados():
                 directorio_actual = os.getcwd()
                 os.chdir(os.path.join(app.config['UPLOAD_FOLDER']))
                 # SE OBTIENE LA CANTIDAD DE PAGINAS
-                cantidad_paginas = contar_paginas(dir,nombre_archivo)
+                cantidad_paginas = contar_paginas(dir, nombre_archivo)
                 os.remove(nombre_archivo)
                 os.chdir(directorio_actual)
             # SI EL MODO NO ES AUTOMATICO
