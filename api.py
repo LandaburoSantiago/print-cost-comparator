@@ -17,6 +17,26 @@ def inicio():
     return render_template('principal.html')
 
 
+@app.route('/menug')
+def menug():
+    return render_template('menu.html')
+
+
+@app.route('/menuc')
+def menuc():
+    return render_template('menuc.html')
+
+
+@app.route('/librerias_gchu')
+def librerias_gchu():
+    return render_template('librerias_gchu.html')
+
+
+@app.route('/librerias_cdelu')
+def librerias_cdelu():
+    return render_template('librerias_cdelu.html')
+
+
 @app.route('/formulario_cdelu_automatico')
 def formulario_cdelu_automatico():
     return render_template('formulario_cdelu_automatico.html')
