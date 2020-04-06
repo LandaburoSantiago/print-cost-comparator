@@ -26,9 +26,6 @@
           <tr>
             <th scope="col">Precio total</th>
             <th scope="col">Fotocopiadora</th>
-            <th scope="col">Direccion</th>
-            <th scope="col">Mail</th>
-            <th scope="col">Telefono</th>
             <th scope="col">Horario</th>
             <th scope="col">...</th>
           </tr>
@@ -40,9 +37,6 @@
                   <tr class="estado_abierto" data-toggle="tooltip" data-placement="top" title="Abierto">
                     <th scope="row">${{elemento['precio_total']}}</th>
                     <td>{{elemento['nombre']}}</td>
-                    <td>{{elemento['direccion']}}</td>
-                    <td><a href="mailto:{{elemento['mail']}}">{{elemento['mail']}}</a></td>
-                    <td>{{elemento['telefono']}}</td>
                     <input type="hidden" name="idCiudad" value="{{ciudad}}">
                     <input type="hidden" name="idFotocopiadora" value="{{elemento['id']}}">
                     <td>{{elemento['hora_apertura']}} a {{elemento['hora_cierre']}}</td>
@@ -54,9 +48,6 @@
                   <tr class="estado_cerrado" data-toggle="tooltip" data-placement="top" title="Cerrado">
                     <th scope="row">${{elemento['precio_total']}}</th>
                     <td>{{elemento['nombre']}}</td>
-                    <td>{{elemento['direccion']}}</td>
-                    <td><a href="mailto:{{elemento['mail']}}">{{elemento['mail']}}</a></td>
-                    <td>{{elemento['telefono']}}</td>
                     <input type="hidden" name="idCiudad" value="{{ciudad}}">
                     <input type="hidden" name="idFotocopiadora" value="{{elemento['id']}}">
                     <td>{{elemento['hora_apertura']}} a {{elemento['hora_cierre']}}</td>
