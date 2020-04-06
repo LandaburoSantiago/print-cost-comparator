@@ -14,7 +14,7 @@
         $('[data-toggle="tooltip"]').tooltip();
       });
     </script>
-    <title>--Copia Barata--</title>
+    <title>sin titulo</title>
     {% include 'barra_navegacion.html' %}
     {% include 'hecho_por.html' %}
   </head>
@@ -45,7 +45,7 @@
                     <input type="hidden" name="idCiudad" value="{{ciudad}}">
                     <input type="hidden" name="idFotocopiadora" value="{{elemento['id']}}">
                     <td>{{elemento['hora_apertura']}} a {{elemento['hora_cierre']}}</td>
-                    <td><a style="text-decoration: none" href="/mas_detalles"><button type="submit" data-toggle="tooltip" data-placement="left" title="Mas detalles" class="btn btn-secondary btn-sm">+</button></a></td>    
+                    <td><a style="text-decoration: none" href="/mas_detalles"><button type="submit" data-toggle="tooltip" data-placement="left" title="Mas detalles" class="btn btn-secondary btn-sm">+</button></a></td>
                   </tr>
                 </form>
               {%else%}
