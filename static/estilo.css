@@ -17,10 +17,10 @@ html{
       border-radius: 10px;
 
     }
-    .navbar-brand{
-        position: relative;
-        left: 50%;
-        margin-left: -82.27px;
+    .texto-barra{
+    position:relative;
+    left: 50%;
+    margin-left: -152.99px;
     }
     .ciudad1{
       position:absolute;
@@ -271,10 +271,10 @@ html{
 
 /* Pantallas medianas */
 @media (max-width: 1440px) and (min-width: 600px) {
-  .navbar-brand{
-      position: relative;
-      left: 50%;
-      margin-left: -82.27px;
+  .texto-barra{
+    position:relative;
+    left: 50%;
+    margin-left: -152.99px;
   }
   .ciudad1{
     position:absolute;
@@ -527,10 +527,10 @@ html{
 
 /* Pantallas grandes */
 @media (max-width: 1920px) and (min-width: 1600px) {
-  .navbar-brand{
-      position: relative;
-      left: 50%;
-      margin-left: -82.27px;
+  .texto-barra{
+    position:relative;
+    left: 50%;
+    margin-left: -152.99px;
   }
   .ciudad1{
     position:absolute;
