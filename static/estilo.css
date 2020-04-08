@@ -149,7 +149,8 @@ html{
    }
     .btn.btn-outline-dark{
         position: absolute;
-        top: 9px;
+        top: 4%;
+        margin-top: -19px;
     }
     .accordion{
     position: absolute;
