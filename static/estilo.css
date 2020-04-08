@@ -30,11 +30,10 @@ html{
       font-size: 12px;
     }
     .texto-barra{
-    position:relative;
-    width: 10px;
+    position: ;
     left: 50%;
-    margin-left: -91.795px;
-    }
+    margin-left: -160.99px;
+  }
     .ciudad1{
       position:absolute;
       font-family:Oswald;
@@ -156,11 +155,6 @@ html{
      background-color: #46ce76;
      transition: all 0.5s ease;
    }
-    .btn.btn-outline-dark{
-        position: absolute;
-        top: 5%;
-        margin-top: -19px;
-    }
     .accordion{
     position: absolute;
     width: 350px;
@@ -286,9 +280,9 @@ html{
 /* Pantallas medianas */
 @media (max-width: 1440px) and (min-width: 600px) {
   .texto-barra{
-    position:relative;
+    position: absolute;
     left: 50%;
-    margin-left: -152.99px;
+    margin-left: -160.99px;
   }
   .ciudad1{
     position:absolute;
@@ -412,10 +406,6 @@ html{
    background-color: #46ce76;
    transition: all 0.5s ease;
  }
-  .btn.btn-outline-dark{
-      position: absolute;
-      top: 9px;
-  }
   .accordion{
     position: absolute;
     width: 450px;
