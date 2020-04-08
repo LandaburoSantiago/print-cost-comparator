@@ -17,6 +17,15 @@ html{
       border-radius: 10px;
 
     }
+    .barra_navegacion{
+      position: absolute;
+      width: 100%;
+      height: 55px;
+    }
+    .navbar.navbar-light.bg-light{
+      position:relative;
+      height: 55px;
+    }
     .navbar-brand{
       font-size: 12px;
     }
@@ -149,7 +158,7 @@ html{
    }
     .btn.btn-outline-dark{
         position: absolute;
-        top: 4%;
+        top: 5%;
         margin-top: -19px;
     }
     .accordion{
