@@ -17,10 +17,14 @@ html{
       border-radius: 10px;
 
     }
+    .navbar-brand{
+      font-size: 12px;
+    }
     .texto-barra{
     position:relative;
+    width: 10px;
     left: 50%;
-    margin-left: -152.99px;
+    margin-left: -91.795px;
     }
     .ciudad1{
       position:absolute;
