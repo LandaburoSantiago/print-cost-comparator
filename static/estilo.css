@@ -23,10 +23,11 @@ html{
     .texto-barra{
     position: relative;
     left: 50%;
-    margin-left: -91.795px;
+    margin-left: -90.00px;
   }
   .link-boton{
     position:absolute;
+    left: 2%
   }
     .ciudad1{
       position:absolute;
