@@ -17,7 +17,7 @@
     </script>
     <title>sin titulo</title>
     {% include 'barra_navegacion_boton.html' %}
-    {% include 'hecho_por.html' %}  
+    {% include 'hecho_por.html' %}
 </head>
 <body>
   <div class="alert alert-warning" role="alert">
@@ -40,6 +40,10 @@
           <p class="titulos-info">E-Mail:</p><p class="info-mail"><a href="mailto:{{info['mail']}}">{{info['mail']}}</a></p>
           <p class="titulos-info">Teléfono:</p><p class="info-telefono">{{info['telefono']}}</p>
           <p class="titulos-info">Dirección:</p><p class="info-direccion">{{info['direccion']}}</p>
+          <div class="imagenes-redes">
+              <a href=""> <img class="img-infoFace" src="{{url_for('static', filename = 'iconofacebook.png')}}" alt="Facebook"></a>
+              <a href=""> <img class="img-infoInsta" src="{{url_for('static', filename = 'iconoinstagram.png')}}" alt="Instagram"></a>
+          </div>
         </div>
       </div>
     </div>
