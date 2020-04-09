@@ -410,7 +410,7 @@ html{
     position: absolute;
     width: 450px;
     height: 500px;
-    top: 15%;
+    top: 18%;
     left: 50%;
     margin-left: -225px;
   }
@@ -488,9 +488,10 @@ html{
       position:absolute;
       color:#464444;
       width: 255px;
-      top:85%;
+      top:100%;
       left: 50%;
       margin-left: -125.155px;
+      margin-top: -84px;
       font-family: 'Indie Flower', cursive;
     }
     h2{
@@ -522,9 +523,6 @@ html{
        width: 20%;
        left: 45%;
        margin-left: 5px;
-    }
-    .alert.alert-warning{
-      height: 40px;
     }
 }
 
@@ -744,9 +742,11 @@ html{
     .miNombre{
       position:absolute;
       color:#464444;
-      top:85%;
+      width: 255px;
+      top:100%;
       left: 50%;
       margin-left: -125.155px;
+      margin-top: -84px;
       font-family: 'Indie Flower', cursive;
     }
     h2{
