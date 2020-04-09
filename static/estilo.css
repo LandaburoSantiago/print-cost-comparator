@@ -270,6 +270,15 @@ html{
        left: 45%;
        margin-left: 5px;
     }
+    .img-infoFace{
+      width: 35px;
+      height: 35px;
+    }
+    .img-infoInsta{
+      width: 35px;
+      height: 35px;
+      margin-left: 2px;
+    }
 }
 
 
@@ -523,6 +532,15 @@ html{
        width: 20%;
        left: 45%;
        margin-left: 5px;
+    }
+    .img-infoFace{
+      width: 35px;
+      height: 35px;
+    }
+    .img-infoInsta{
+      width: 35px;
+      height: 35px;
+      margin-left: 2px;
     }
 }
 
@@ -778,6 +796,15 @@ html{
        width: 20%;
        left: 45%;
        margin-left: 5px;
+    }
+    .img-infoFace{
+      width: 35px;
+      height: 35px;
+    }
+    .img-infoInsta{
+      width: 35px;
+      height: 35px;
+      margin-left: 2px;
     }
 }
 }
