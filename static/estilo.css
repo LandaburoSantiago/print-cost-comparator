@@ -18,21 +18,22 @@ html{
 
     }
     .barra_navegacion{
-      position: absolute;
       width: 100%;
       height: 55px;
     }
     .navbar.navbar-light.bg-light{
-      position:relative;
       height: 55px;
     }
     .navbar-brand{
       font-size: 12px;
     }
     .texto-barra{
-    position: ;
+    position: relative;
     left: 50%;
-    margin-left: -160.99px;
+    margin-left: -99.795px;
+  }
+  .link-boton{
+    position:absolute;
   }
     .ciudad1{
       position:absolute;
@@ -280,9 +281,12 @@ html{
 /* Pantallas medianas */
 @media (max-width: 1440px) and (min-width: 600px) {
   .texto-barra{
-    position: absolute;
+    position: relative;
     left: 50%;
     margin-left: -160.99px;
+  }
+  .link-boton{
+    position:absolute;
   }
   .ciudad1{
     position:absolute;
@@ -532,9 +536,12 @@ html{
 /* Pantallas grandes */
 @media (max-width: 1920px) and (min-width: 1600px) {
   .texto-barra{
-    position:relative;
+    position: relative;
     left: 50%;
-    margin-left: -152.99px;
+    margin-left: -160.99px;
+  }
+  .link-boton{
+    position:absolute;
   }
   .ciudad1{
     position:absolute;
@@ -658,10 +665,6 @@ html{
    background-color: #46ce76;
    transition: all 0.5s ease;
  }
-  .btn.btn-outline-dark{
-      position: absolute;
-      top: 9px;
-  }
   .accordion{
     position: absolute;
     width: 450px;
