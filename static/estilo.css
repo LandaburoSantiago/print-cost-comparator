@@ -17,13 +17,6 @@ html{
       border-radius: 10px;
 
     }
-    .barra_navegacion{
-      width: 100%;
-      height: 55px;
-    }
-    .navbar.navbar-light.bg-light{
-      height: 55px;
-    }
     .navbar-brand{
       font-size: 12px;
     }
