@@ -18,10 +18,11 @@ html{
 
     }
     .navbar-brand{
-      font-size: 12px;
+      font-size: 80%;
     }
     .texto-barra{
     position: relative;
+    float: left;
     left: 50%;
     margin-left: -90.00px;
   }
@@ -276,8 +277,9 @@ html{
 @media (max-width: 1440px) and (min-width: 600px) {
   .texto-barra{
     position: relative;
+    width: 305.98px;
     left: 50%;
-    margin-left: -160.99px;
+    margin-left: -152.99px;
   }
   .link-boton{
     position:absolute;
@@ -531,8 +533,9 @@ html{
 @media (max-width: 1920px) and (min-width: 1600px) {
   .texto-barra{
     position: relative;
+    width: 305.98px;
     left: 50%;
-    margin-left: -160.99px;
+    margin-left: -152.99px;
   }
   .link-boton{
     position:absolute;
