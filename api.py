@@ -154,6 +154,11 @@ def mas_detalles():
     return render_template('mas_detalles.html', info=info)
 
 
+@app.route('/error_sin_red')
+def error_sin_red():
+    return render_template('error_sin_red.html')
+
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
