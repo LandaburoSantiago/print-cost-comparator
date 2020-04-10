@@ -41,8 +41,8 @@
           <p class="titulos-info">Teléfono:</p><p class="info-telefono">{{info['telefono']}}</p>
           <p class="titulos-info">Dirección:</p><p class="info-direccion">{{info['direccion']}}</p>
           <div class="imagenes-redes">
-              <a href=""> <img class="img-infoFace" src="{{url_for('static', filename = 'iconofacebook.png')}}" alt="Facebook"></a>
-              <a href=""> <img class="img-infoInsta" src="{{url_for('static', filename = 'iconoinstagram.png')}}" alt="Instagram"></a>
+              <a href="{{info['facebook']}}"> <img class="img-infoFace" src="{{url_for('static', filename = 'iconofacebook.png')}}" alt="Facebook"></a>
+              <a href="{{info['instagram']}}"> <img class="img-infoInsta" src="{{url_for('static', filename = 'iconoinstagram.png')}}" alt="Instagram"></a>
           </div>
         </div>
       </div>
