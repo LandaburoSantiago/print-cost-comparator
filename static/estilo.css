@@ -255,6 +255,15 @@ html{
       top: 50%;
       margin-top:-51px;
     }
+    .mensaje_error_red{
+      position:absolute;
+      color: white;
+      font-family: 'Amatic SC', cursive;
+      left: 50%;
+      margin-left: -168.08px;
+      top: 50%;
+      margin-top:-51px;
+    }
     .contenedor-imagenes{
       width: 255px;
     }
@@ -510,6 +519,15 @@ html{
       margin-left:-47.5px;
     }
     .mensaje_error_ciudad{
+      position:absolute;
+      color: white;
+      font-family: 'Amatic SC', cursive;
+      left: 50%;
+      margin-left: -224.1px;
+      top: 50%;
+      margin-top:-51px;
+    }
+    .mensaje_error_red{
       position:absolute;
       color: white;
       font-family: 'Amatic SC', cursive;
@@ -774,6 +792,15 @@ html{
       margin-left:-47.5px;
     }
     .mensaje_error_ciudad{
+      position:absolute;
+      color: white;
+      font-family: 'Amatic SC', cursive;
+      left: 50%;
+      margin-left: -224.1px;
+      top: 50%;
+      margin-top:-51px;
+    }
+    .mensaje_error_red{
       position:absolute;
       color: white;
       font-family: 'Amatic SC', cursive;
