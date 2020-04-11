@@ -268,11 +268,11 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
             }
             # LOS DICCIONARIOS ARMADOS SE GUARDAN EN UNA LISTA
             lista.append(diccionario)
-            # LA LISTA SE ORDENA POR EL CAMPO PRECIO_TOTAL
-            lista.sort(key=lambda k: k['precio_total'])
-            # FORMATEA EL NUMERO PARA QUE TENGA LA FORMA N.NN
-            for i in lista:
-                i['precio_total'] = "{0: .2f}".format(i['precio_total'])
+        # LA LISTA SE ORDENA POR EL CAMPO PRECIO_TOTAL
+    lista.sort(key=lambda k: k['precio_total'])
+    # FORMATEA EL NUMERO PARA QUE TENGA LA FORMA N.NN
+    for i in lista:
+        i['precio_total'] = "{0: .2f}".format(i['precio_total'])
     return lista
 
 
@@ -292,12 +292,10 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
             cantidad_paginas += 1
     for i in documento:
         if i['aparecer_calculadora'] == 'True':
-            print('!!!!!!!!!!!!!!!!!!!!!!!!!!')
             # CONVERTIR EL PRECIO DE LA FOTOCOPIA A FLOAT REALIZA EL CALCULO
             if simple_doble == 'doblefaz':
                 precio = float(i['precio_fotocopia_byn_doble'])*cantidad_paginas
             else:
-                print('uuuuuuuuuuuuuuuuuuuuuu   ')
                 precio = float(i['precio_fotocopia_byn_simple'])*cantidad_paginas
             # SI EL DIA ES 0(DOMINGO) LA SITUACION SE PONE EN 'CERRADO' AUTOMATICAMENTE
             if dia == '0':
@@ -397,8 +395,6 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
             }
             # LOS DICCIONARIOS ARMADOS SE GUARDAN EN UNA LISTA
             lista.append(diccionario)
-        else:
-            print('EEEEEEEEEEEEEEEEEEEEEEEE')
     # LA LISTA SE ORDENA POR EL CAMPO PRECIO_TOTAL
     lista.sort(key=lambda k: k['precio_total'])
     # FORMATEA EL NUMERO PARA QUE TENGA LA FORMA N.NN
