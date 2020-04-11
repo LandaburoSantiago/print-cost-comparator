@@ -37,9 +37,12 @@
       </div>
       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
         <div class="card-body">
-          <p class="titulos-info">E-Mail:</p><p class="info-mail"><a href="mailto:{{info['mail']}}">{{info['mail']}}</a></p>
-          <p class="titulos-info">Teléfono:</p><p class="info-telefono">{{info['telefono']}}</p>
-          <p class="titulos-info">Dirección:</p><p class="info-direccion">{{info['direccion']}}</p>
+          <p class="titulos-info"><b>E-Mail: </b><a href="mailto:{{info['mail']}}">{{info['mail']}}</a></p>
+          <!-- <p class="info-mail"><a href="mailto:{{info['mail']}}">{{info['mail']}}</a></p> -->
+          <p class="titulos-info"><b>Teléfono: </b>{{info['telefono']}}</p>
+          <!-- <p class="info-telefono">{{info['telefono']}}</p> -->
+          <p class="titulos-info"><b>Dirección: </b>{{info['direccion']}}</p>
+          <!-- <p class="info-direccion">{{info['direccion']}}</p> -->
           <div class="imagenes-redes">
               <a href="{{info['facebook']}}"> <img class="img-infoFace" src="{{url_for('static', filename = 'iconofacebook.png')}}" alt="Facebook"></a>
               <a href="{{info['instagram']}}"> <img class="img-infoInsta" src="{{url_for('static', filename = 'iconoinstagram.png')}}" alt="Instagram"></a>
@@ -57,11 +60,14 @@
       </div>
       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
         <div class="card-body">
-          <p class="titulos-info">Copia a color simple:${{info['precio_fotocopia_color_simple']}}</p>
+          <p class="titulos-info"><b>Copia a color simple: </b>${{info['precio_fotocopia_color_simple']}}</p>
           <!-- <p class="info-precio-color-simple">${{info['precio_fotocopia_color_simple']}}</p> -->
-          <p class="titulos-info">Copia en blanco y negro simple:</p><p class="info-precio-byn-simple">${{info['precio_fotocopia_byn_simple']}}</p>
-          <p class="titulos-info">Copia a color doble faz:</p><p class="info-precio-color-doble">${{info['precio_fotocopia_color_doble']}}</p>
-          <p class="titulos-info">Copia en blanco y negro doble faz:</p><p class="info-precio-byn-doble">${{info['precio_fotocopia_byn_doble']}}</p>
+          <p class="titulos-info"><b>Copia en blanco y negro simple: </b>${{info['precio_fotocopia_byn_simple']}}</p>
+          <!-- <p class="info-precio-byn-simple">${{info['precio_fotocopia_byn_simple']}}</p> -->
+          <p class="titulos-info"><b>Copia a color doble faz: </b>${{info['precio_fotocopia_color_doble']}}</p>
+          <!-- <p class="info-precio-color-doble">${{info['precio_fotocopia_color_doble']}}</p> -->
+          <p class="titulos-info"><b>Copia en blanco y negro doble faz: </b>${{info['precio_fotocopia_byn_doble']}}</p>
+          <!-- <p class="info-precio-byn-doble">${{info['precio_fotocopia_byn_doble']}}</p> -->
         </div>
       </div>
     </div>
@@ -76,7 +82,8 @@
       <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
         <div class="card-body">
           <h6 class="card-subtitle mb-2 text-muted">Horarios: {{info['hora_apertura_maniana']}} a {{info['hora_cierre_maniana']}} y {{info['hora_apertura_tarde']}} a {{info['hora_cierre_maniana']}}</h6>
-          <p class="titulos-info">El sábado a la tarde</p><p class="info-sabado">{{info['sabado_tarde']}} abre</p>
+          <p class="titulos-info">El sábado a la tarde {{info['sabado_tarde']}} abre</p>
+          <!-- <p class="info-sabado">{{info['sabado_tarde']}} abre</p> -->
         </div>
       </div>
     </div>
