@@ -164,114 +164,115 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
             cantidad_paginas = cantidad_paginas // 2
             cantidad_paginas += 1
     for i in documento:
-        # CONVERTIR EL PRECIO DE LA FOTOCOPIA A FLOAT REALIZA EL CALCULO
-        if simple_doble == 'doblefaz':
-            precio = float(i['precio_fotocopia_color_doble'])*cantidad_paginas
-        else:
-            precio = float(i['precio_fotocopia_color_simple'])*cantidad_paginas
-        # SI EL DIA ES 0(DOMINGO) LA SITUACION SE PONE EN 'CERRADO' AUTOMATICAMENTE Y LOS HORARIOS DE MANIANA
-        if dia == '0':
-            hora_a = i['hora_apertura_maniana']
-            hora_c = i['hora_cierre_maniana']
-            situacion = 'cerrado'
-        else:
-            # SI NO ES DOMINGO SE PREGUNTA SI ES SABADO
-            if dia == '6':
-                # SI ES SABADO SE PREGUNTA SI EL SABADO DE TARDE ABRE
-                if i['sabado_tarde'] == 'si':
-                    # SI SABADO DE TARDE ABRE PREGUNTA SI ES DE MANIANA
+        if i['aparecer_calculadora'] is True:
+            # CONVERTIR EL PRECIO DE LA FOTOCOPIA A FLOAT REALIZA EL CALCULO
+            if simple_doble == 'doblefaz':
+                precio = float(i['precio_fotocopia_color_doble'])*cantidad_paginas
+            else:
+                precio = float(i['precio_fotocopia_color_simple'])*cantidad_paginas
+            # SI EL DIA ES 0(DOMINGO) LA SITUACION SE PONE EN 'CERRADO' AUTOMATICAMENTE Y LOS HORARIOS DE MANIANA
+            if dia == '0':
+                hora_a = i['hora_apertura_maniana']
+                hora_c = i['hora_cierre_maniana']
+                situacion = 'cerrado'
+            else:
+                # SI NO ES DOMINGO SE PREGUNTA SI ES SABADO
+                if dia == '6':
+                    # SI ES SABADO SE PREGUNTA SI EL SABADO DE TARDE ABRE
+                    if i['sabado_tarde'] == 'si':
+                        # SI SABADO DE TARDE ABRE PREGUNTA SI ES DE MANIANA
+                        if momento_dia == 'maniana':
+                            # TOMA LOS VALORES DE HORARIO APRETURA Y CIERRE DE MANIANA
+                            hora_a = i['hora_apertura_maniana']
+                            hora_c = i['hora_cierre_maniana']
+                            # PREGUNTA SI LA HORA DEL SISTEMA ESTA DENTRO DEL RANGO DE HORARIO DE APERTURA Y CIERRE DE MANIANA
+                            if hora >= datetime.strptime(i['hora_apertura_maniana']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_maniana']+":00", "%X").time():
+                                # SI ESTA DENTRO DEL RANGO LA SITUACION ES ABIERTO
+                                situacion = 'abierto'
+                            else:
+                                # SI NO ESTA DENTRO DEL RANGO LA SITUACION ES CERRADO
+                                situacion = 'cerrado'
+                        # SI EL MOMENTO DEL DIA NO ES MANIANA PREGUNTA SI ES DE TARDE
+                        elif momento_dia == 'tarde':
+                            # TOMA LOS VALORES DE HORARIO APRETURA Y CIERRE DE TARDE
+                            hora_a = i['hora_apertura_tarde']
+                            hora_c = i['hora_cierre_tarde']
+                            # PREGUNTA SI LA HORA DEL SISTEMA ESTA DENTRO DEL RANGO DE HORARIO DE APERTURA Y CIERRE DE TARDE
+                            if hora >= datetime.strptime(i['hora_apertura_tarde']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_tarde']+":00", "%X").time():
+                                # SI ESTA DENTRO DEL RANGO LA SITUACION ES ABIERTO
+                                situacion = 'abierto'
+                            else:
+                                # SI NO ESTA DENTRO DEL RANGO LA SITUACION ES CERRADO
+                                situacion = 'cerrado'
+                        # SI EL MOMENTO DEL DIA NO ES TARDE PREGUNTA SI ES DE NOCHE
+                        elif momento_dia == 'noche':
+                            # TOMA LOS VALORES DE APERTURA Y CIERRE DE MANIANA
+                            hora_a = i['hora_apertura_maniana']
+                            hora_c = i['hora_cierre_maniana']
+                            # Y LA SITUACION ES CERRADO
+                            situacion = 'cerrado'
+                        # SI EL SABADO DE TARDE NO ABRE
+                    else:
+                        # HACE LAS MISMAS PREGUNTAS PERO SOLAMENTE PARA EL MOMENTO DEL DIA DE MANIANA
+                        if momento_dia == 'maniana':
+                            hora_a = i['hora_apertura_maniana']
+                            hora_c = i['hora_cierre_maniana']
+                            if hora >= datetime.strptime(i['hora_apertura_maniana']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_maniana']+":00", "%X").time():
+                                situacion = 'abierto'
+                            else:
+                                situacion = 'cerrado'
+                        else:
+                            # SI NO ES DE MANIANA SE COLOCA LA SITUACION EN CERRADO Y LOS HORARIOS DE MANIANA
+                            hora_a = i['hora_apertura_maniana']
+                            hora_c = i['hora_cierre_maniana']
+                            situacion = 'cerrado'
+                # SI EL DIA NO ES SABADO
+                else:
+                    # SE HACEN LAS MISMAS PREGUNTAS PARA TODOS LOS MOMENTOS DEL DIA
                     if momento_dia == 'maniana':
-                        # TOMA LOS VALORES DE HORARIO APRETURA Y CIERRE DE MANIANA
                         hora_a = i['hora_apertura_maniana']
                         hora_c = i['hora_cierre_maniana']
-                        # PREGUNTA SI LA HORA DEL SISTEMA ESTA DENTRO DEL RANGO DE HORARIO DE APERTURA Y CIERRE DE MANIANA
                         if hora >= datetime.strptime(i['hora_apertura_maniana']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_maniana']+":00", "%X").time():
-                            # SI ESTA DENTRO DEL RANGO LA SITUACION ES ABIERTO
                             situacion = 'abierto'
                         else:
-                            # SI NO ESTA DENTRO DEL RANGO LA SITUACION ES CERRADO
                             situacion = 'cerrado'
-                    # SI EL MOMENTO DEL DIA NO ES MANIANA PREGUNTA SI ES DE TARDE
                     elif momento_dia == 'tarde':
-                        # TOMA LOS VALORES DE HORARIO APRETURA Y CIERRE DE TARDE
                         hora_a = i['hora_apertura_tarde']
                         hora_c = i['hora_cierre_tarde']
-                        # PREGUNTA SI LA HORA DEL SISTEMA ESTA DENTRO DEL RANGO DE HORARIO DE APERTURA Y CIERRE DE TARDE
                         if hora >= datetime.strptime(i['hora_apertura_tarde']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_tarde']+":00", "%X").time():
-                            # SI ESTA DENTRO DEL RANGO LA SITUACION ES ABIERTO
                             situacion = 'abierto'
                         else:
-                            # SI NO ESTA DENTRO DEL RANGO LA SITUACION ES CERRADO
                             situacion = 'cerrado'
-                    # SI EL MOMENTO DEL DIA NO ES TARDE PREGUNTA SI ES DE NOCHE
                     elif momento_dia == 'noche':
-                        # TOMA LOS VALORES DE APERTURA Y CIERRE DE MANIANA
-                        hora_a = i['hora_apertura_maniana']
-                        hora_c = i['hora_cierre_maniana']
-                        # Y LA SITUACION ES CERRADO
-                        situacion = 'cerrado'
-                    # SI EL SABADO DE TARDE NO ABRE
-                else:
-                    # HACE LAS MISMAS PREGUNTAS PERO SOLAMENTE PARA EL MOMENTO DEL DIA DE MANIANA
-                    if momento_dia == 'maniana':
-                        hora_a = i['hora_apertura_maniana']
-                        hora_c = i['hora_cierre_maniana']
-                        if hora >= datetime.strptime(i['hora_apertura_maniana']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_maniana']+":00", "%X").time():
-                            situacion = 'abierto'
-                        else:
-                            situacion = 'cerrado'
-                    else:
-                        # SI NO ES DE MANIANA SE COLOCA LA SITUACION EN CERRADO Y LOS HORARIOS DE MANIANA
                         hora_a = i['hora_apertura_maniana']
                         hora_c = i['hora_cierre_maniana']
                         situacion = 'cerrado'
-            # SI EL DIA NO ES SABADO
-            else:
-                # SE HACEN LAS MISMAS PREGUNTAS PARA TODOS LOS MOMENTOS DEL DIA
-                if momento_dia == 'maniana':
-                    hora_a = i['hora_apertura_maniana']
-                    hora_c = i['hora_cierre_maniana']
-                    if hora >= datetime.strptime(i['hora_apertura_maniana']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_maniana']+":00", "%X").time():
-                        situacion = 'abierto'
-                    else:
-                        situacion = 'cerrado'
-                elif momento_dia == 'tarde':
-                    hora_a = i['hora_apertura_tarde']
-                    hora_c = i['hora_cierre_tarde']
-                    if hora >= datetime.strptime(i['hora_apertura_tarde']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_tarde']+":00", "%X").time():
-                        situacion = 'abierto'
-                    else:
-                        situacion = 'cerrado'
-                elif momento_dia == 'noche':
-                    hora_a = i['hora_apertura_maniana']
-                    hora_c = i['hora_cierre_maniana']
-                    situacion = 'cerrado'
 
-        # SE ARMA UN DICCIONARIO CON TODOS LOS CAMPOS
-        diccionario = {
-            'id': i['_id'],
-            'nombre': i['nombre'],
-            'precio_total': precio,
-            'precio_fotocopia_color_simple': i['precio_fotocopia_color_simple'],
-            'precio_fotocopia_byn_simple': i['precio_fotocopia_byn_simple'],
-            'precio_fotocopia_color_doble': i['precio_fotocopia_color_doble'],
-            'precio_fotocopia_byn_doble': i['precio_fotocopia_byn_doble'],
-            'mail': i['mail'],
-            'telefono': i['telefono'],
-            'direccion': i['direccion'],
-            # SE AGREGA HORA_APERTURA Y HORA_CIERRE PARA MOSTRAR EN EL HTML
-            'hora_apertura': hora_a,
-            'hora_cierre': hora_c,
-            # LA SITUACION ES PARA INDICARLO EN EL HTML SI ES ABIERTO O CERRADO
-            'abierto_cerrado': situacion
-        }
-        # LOS DICCIONARIOS ARMADOS SE GUARDAN EN UNA LISTA
-        lista.append(diccionario)
-    # LA LISTA SE ORDENA POR EL CAMPO PRECIO_TOTAL
-    lista.sort(key=lambda k: k['precio_total'])
-    # FORMATEA EL NUMERO PARA QUE TENGA LA FORMA N.NN
-    for i in lista:
-        i['precio_total'] = "{0: .2f}".format(i['precio_total'])
+            # SE ARMA UN DICCIONARIO CON TODOS LOS CAMPOS
+            diccionario = {
+                'id': i['_id'],
+                'nombre': i['nombre'],
+                'precio_total': precio,
+                'precio_fotocopia_color_simple': i['precio_fotocopia_color_simple'],
+                'precio_fotocopia_byn_simple': i['precio_fotocopia_byn_simple'],
+                'precio_fotocopia_color_doble': i['precio_fotocopia_color_doble'],
+                'precio_fotocopia_byn_doble': i['precio_fotocopia_byn_doble'],
+                'mail': i['mail'],
+                'telefono': i['telefono'],
+                'direccion': i['direccion'],
+                # SE AGREGA HORA_APERTURA Y HORA_CIERRE PARA MOSTRAR EN EL HTML
+                'hora_apertura': hora_a,
+                'hora_cierre': hora_c,
+                # LA SITUACION ES PARA INDICARLO EN EL HTML SI ES ABIERTO O CERRADO
+                'abierto_cerrado': situacion
+            }
+            # LOS DICCIONARIOS ARMADOS SE GUARDAN EN UNA LISTA
+            lista.append(diccionario)
+        # LA LISTA SE ORDENA POR EL CAMPO PRECIO_TOTAL
+        lista.sort(key=lambda k: k['precio_total'])
+        # FORMATEA EL NUMERO PARA QUE TENGA LA FORMA N.NN
+        for i in lista:
+            i['precio_total'] = "{0: .2f}".format(i['precio_total'])
     return lista
 
 
@@ -290,113 +291,114 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
             cantidad_paginas = cantidad_paginas // 2
             cantidad_paginas += 1
     for i in documento:
-        # CONVERTIR EL PRECIO DE LA FOTOCOPIA A FLOAT REALIZA EL CALCULO
-        if simple_doble == 'doblefaz':
-            precio = float(i['precio_fotocopia_byn_doble'])*cantidad_paginas
-        else:
-            precio = float(i['precio_fotocopia_byn_simple'])*cantidad_paginas
-        # SI EL DIA ES 0(DOMINGO) LA SITUACION SE PONE EN 'CERRADO' AUTOMATICAMENTE
-        if dia == '0':
-            hora_a = i['hora_apertura_maniana']
-            hora_c = i['hora_cierre_maniana']
-            situacion = 'cerrado'
-        else:
-            # SI NO ES DOMINGO SE PREGUNTA SI ES SABADO
-            if dia == '6':
-                # SI ES SABADO SE PREGUNTA SI EL SABADO DE TARDE ABRE
-                if i['sabado_tarde'] == 'si':
-                    # SI SABADO DE TARDE ABRE PREGUNTA SI ES DE MANIANA
+        if i['aparecer_calculadora'] is True:
+            # CONVERTIR EL PRECIO DE LA FOTOCOPIA A FLOAT REALIZA EL CALCULO
+            if simple_doble == 'doblefaz':
+                precio = float(i['precio_fotocopia_byn_doble'])*cantidad_paginas
+            else:
+                precio = float(i['precio_fotocopia_byn_simple'])*cantidad_paginas
+            # SI EL DIA ES 0(DOMINGO) LA SITUACION SE PONE EN 'CERRADO' AUTOMATICAMENTE
+            if dia == '0':
+                hora_a = i['hora_apertura_maniana']
+                hora_c = i['hora_cierre_maniana']
+                situacion = 'cerrado'
+            else:
+                # SI NO ES DOMINGO SE PREGUNTA SI ES SABADO
+                if dia == '6':
+                    # SI ES SABADO SE PREGUNTA SI EL SABADO DE TARDE ABRE
+                    if i['sabado_tarde'] == 'si':
+                        # SI SABADO DE TARDE ABRE PREGUNTA SI ES DE MANIANA
+                        if momento_dia == 'maniana':
+                            # TOMA LOS VALORES DE HORARIO APRETURA Y CIERRE DE MANIANA
+                            hora_a = i['hora_apertura_maniana']
+                            hora_c = i['hora_cierre_maniana']
+                            # PREGUNTA SI LA HORA DEL SISTEMA ESTA DENTRO DEL RANGO DE HORARIO DE APERTURA Y CIERRE DE MANIANA
+                            if hora >= datetime.strptime(i['hora_apertura_maniana']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_maniana']+":00", "%X").time():
+                                # SI ESTA DENTRO DEL RANGO LA SITUACION ES ABIERTO
+                                situacion = 'abierto'
+                            else:
+                                # SI NO ESTA DENTRO DEL RANGO LA SITUACION ES CERRADO
+                                situacion = 'cerrado'
+                        # SI EL MOMENTO DEL DIA NO ES MANIANA PREGUNTA SI ES DE TARDE
+                        elif momento_dia == 'tarde':
+                            # TOMA LOS VALORES DE HORARIO APRETURA Y CIERRE DE TARDE
+                            hora_a = i['hora_apertura_tarde']
+                            hora_c = i['hora_cierre_tarde']
+                            # PREGUNTA SI LA HORA DEL SISTEMA ESTA DENTRO DEL RANGO DE HORARIO DE APERTURA Y CIERRE DE TARDE
+                            if hora >= datetime.strptime(i['hora_apertura_tarde']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_tarde']+":00", "%X").time():
+                                # SI ESTA DENTRO DEL RANGO LA SITUACION ES ABIERTO
+                                situacion = 'abierto'
+                            else:
+                                # SI NO ESTA DENTRO DEL RANGO LA SITUACION ES CERRADO
+                                situacion = 'cerrado'
+                        # SI EL MOMENTO DEL DIA NO ES TARDE PREGUNTA SI ES DE NOCHE
+                        elif momento_dia == 'noche':
+                            # TOMA LOS VALORES DE APERTURA Y CIERRE DE MANIANA
+                            hora_a = i['hora_apertura_maniana']
+                            hora_c = i['hora_cierre_maniana']
+                            # Y LA SITUACION ES CERRADO
+                            situacion = 'cerrado'
+                        # SI EL SABADO DE TARDE NO ABRE
+                    else:
+                        # HACE LAS MISMAS PREGUNTAS PERO SOLAMENTE PARA EL MOMENTO DEL DIA DE MANIANA
+                        if momento_dia == 'maniana':
+                            hora_a = i['hora_apertura_maniana']
+                            hora_c = i['hora_cierre_maniana']
+                            if hora >= datetime.strptime(i['hora_apertura_maniana']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_maniana']+":00", "%X").time():
+                                situacion = 'abierto'
+                            else:
+                                situacion = 'cerrado'
+                        # SI NO ES DE MANIANA SE COLOCA LA SITUACION EN CERRADO Y LOS HORARIOS DE MANIANA
+                        else:
+                            hora_a = i['hora_apertura_maniana']
+                            hora_c = i['hora_cierre_maniana']
+                            situacion = 'cerrado'
+                # SI EL DIA NO ES SABADO
+                else:
+                    # SE HACEN LAS MISMAS PREGUNTAS PARA TODOS LOS MOMENTOS DEL DIA
                     if momento_dia == 'maniana':
-                        # TOMA LOS VALORES DE HORARIO APRETURA Y CIERRE DE MANIANA
                         hora_a = i['hora_apertura_maniana']
                         hora_c = i['hora_cierre_maniana']
-                        # PREGUNTA SI LA HORA DEL SISTEMA ESTA DENTRO DEL RANGO DE HORARIO DE APERTURA Y CIERRE DE MANIANA
                         if hora >= datetime.strptime(i['hora_apertura_maniana']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_maniana']+":00", "%X").time():
-                            # SI ESTA DENTRO DEL RANGO LA SITUACION ES ABIERTO
                             situacion = 'abierto'
                         else:
-                            # SI NO ESTA DENTRO DEL RANGO LA SITUACION ES CERRADO
                             situacion = 'cerrado'
-                    # SI EL MOMENTO DEL DIA NO ES MANIANA PREGUNTA SI ES DE TARDE
                     elif momento_dia == 'tarde':
-                        # TOMA LOS VALORES DE HORARIO APRETURA Y CIERRE DE TARDE
                         hora_a = i['hora_apertura_tarde']
                         hora_c = i['hora_cierre_tarde']
-                        # PREGUNTA SI LA HORA DEL SISTEMA ESTA DENTRO DEL RANGO DE HORARIO DE APERTURA Y CIERRE DE TARDE
                         if hora >= datetime.strptime(i['hora_apertura_tarde']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_tarde']+":00", "%X").time():
-                            # SI ESTA DENTRO DEL RANGO LA SITUACION ES ABIERTO
                             situacion = 'abierto'
                         else:
-                            # SI NO ESTA DENTRO DEL RANGO LA SITUACION ES CERRADO
                             situacion = 'cerrado'
-                    # SI EL MOMENTO DEL DIA NO ES TARDE PREGUNTA SI ES DE NOCHE
                     elif momento_dia == 'noche':
-                        # TOMA LOS VALORES DE APERTURA Y CIERRE DE MANIANA
-                        hora_a = i['hora_apertura_maniana']
-                        hora_c = i['hora_cierre_maniana']
-                        # Y LA SITUACION ES CERRADO
-                        situacion = 'cerrado'
-                    # SI EL SABADO DE TARDE NO ABRE
-                else:
-                    # HACE LAS MISMAS PREGUNTAS PERO SOLAMENTE PARA EL MOMENTO DEL DIA DE MANIANA
-                    if momento_dia == 'maniana':
-                        hora_a = i['hora_apertura_maniana']
-                        hora_c = i['hora_cierre_maniana']
-                        if hora >= datetime.strptime(i['hora_apertura_maniana']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_maniana']+":00", "%X").time():
-                            situacion = 'abierto'
-                        else:
-                            situacion = 'cerrado'
-                    # SI NO ES DE MANIANA SE COLOCA LA SITUACION EN CERRADO Y LOS HORARIOS DE MANIANA
-                    else:
                         hora_a = i['hora_apertura_maniana']
                         hora_c = i['hora_cierre_maniana']
                         situacion = 'cerrado'
-            # SI EL DIA NO ES SABADO
-            else:
-                # SE HACEN LAS MISMAS PREGUNTAS PARA TODOS LOS MOMENTOS DEL DIA
-                if momento_dia == 'maniana':
-                    hora_a = i['hora_apertura_maniana']
-                    hora_c = i['hora_cierre_maniana']
-                    if hora >= datetime.strptime(i['hora_apertura_maniana']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_maniana']+":00", "%X").time():
-                        situacion = 'abierto'
-                    else:
-                        situacion = 'cerrado'
-                elif momento_dia == 'tarde':
-                    hora_a = i['hora_apertura_tarde']
-                    hora_c = i['hora_cierre_tarde']
-                    if hora >= datetime.strptime(i['hora_apertura_tarde']+":00", "%X").time() and hora < datetime.strptime(i['hora_cierre_tarde']+":00", "%X").time():
-                        situacion = 'abierto'
-                    else:
-                        situacion = 'cerrado'
-                elif momento_dia == 'noche':
-                    hora_a = i['hora_apertura_maniana']
-                    hora_c = i['hora_cierre_maniana']
-                    situacion = 'cerrado'
-        # SE ARMA UN DICCIONARIO CON TODOS LOS CAMPOS
-        diccionario = {
-            'id': i['_id'],
-            'nombre': i['nombre'],
-            'precio_total': precio,
-            'precio_fotocopia_color_simple': i['precio_fotocopia_color_simple'],
-            'precio_fotocopia_byn_simple': i['precio_fotocopia_byn_simple'],
-            'precio_fotocopia_color_doble': i['precio_fotocopia_color_doble'],
-            'precio_fotocopia_byn_doble': i['precio_fotocopia_byn_doble'],
-            'mail': i['mail'],
-            'telefono': i['telefono'],
-            'direccion': i['direccion'],
-            # SE AGREGA HORA_APERTURA Y HORA_CIERRE PARA MOSTRAR EN EL HTML
-            'hora_apertura': hora_a,
-            'hora_cierre': hora_c,
-            # LA SITUACION ES PARA INDICARLO EN EL HTML SI ES ABIERTO O CERRADO
-            'abierto_cerrado': situacion
-        }
-        # LOS DICCIONARIOS ARMADOS SE GUARDAN EN UNA LISTA
-        lista.append(diccionario)
-    # LA LISTA SE ORDENA POR EL CAMPO PRECIO_TOTAL
-    lista.sort(key=lambda k: k['precio_total'])
-    # FORMATEA EL NUMERO PARA QUE TENGA LA FORMA N.NN
-    for i in lista:
-        i['precio_total'] = "{0: .2f}".format(i['precio_total'])
+            # SE ARMA UN DICCIONARIO CON TODOS LOS CAMPOS
+            diccionario = {
+                'id': i['_id'],
+                'nombre': i['nombre'],
+                'precio_total': precio,
+                'precio_fotocopia_color_simple': i['precio_fotocopia_color_simple'],
+                'precio_fotocopia_byn_simple': i['precio_fotocopia_byn_simple'],
+                'precio_fotocopia_color_doble': i['precio_fotocopia_color_doble'],
+                'precio_fotocopia_byn_doble': i['precio_fotocopia_byn_doble'],
+                'mail': i['mail'],
+                'telefono': i['telefono'],
+                'direccion': i['direccion'],
+                # SE AGREGA HORA_APERTURA Y HORA_CIERRE PARA MOSTRAR EN EL HTML
+                'hora_apertura': hora_a,
+                'hora_cierre': hora_c,
+                # LA SITUACION ES PARA INDICARLO EN EL HTML SI ES ABIERTO O CERRADO
+                'abierto_cerrado': situacion
+            }
+            # LOS DICCIONARIOS ARMADOS SE GUARDAN EN UNA LISTA
+            lista.append(diccionario)
+        # LA LISTA SE ORDENA POR EL CAMPO PRECIO_TOTAL
+        lista.sort(key=lambda k: k['precio_total'])
+        # FORMATEA EL NUMERO PARA QUE TENGA LA FORMA N.NN
+        for i in lista:
+            i['precio_total'] = "{0: .2f}".format(i['precio_total'])
     return lista
 
 
