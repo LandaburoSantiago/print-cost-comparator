@@ -252,7 +252,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
             diccionario = {
                 'id': i['_id'],
                 'nombre': i['nombre'],
-                'precio_total': precio,
+                'precio_total': 'precio',
                 'precio_fotocopia_color_simple': i['precio_fotocopia_color_simple'],
                 'precio_fotocopia_byn_simple': i['precio_fotocopia_byn_simple'],
                 'precio_fotocopia_color_doble': i['precio_fotocopia_color_doble'],
@@ -378,7 +378,7 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
             diccionario = {
                 'id': i['_id'],
                 'nombre': i['nombre'],
-                'precio_total': precio,
+                'precio_total': 'precio',
                 'precio_fotocopia_color_simple': i['precio_fotocopia_color_simple'],
                 'precio_fotocopia_byn_simple': i['precio_fotocopia_byn_simple'],
                 'precio_fotocopia_color_doble': i['precio_fotocopia_color_doble'],
