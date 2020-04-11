@@ -292,6 +292,7 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
             cantidad_paginas += 1
     for i in documento:
         if i['aparecer_calculadora'] == 'True':
+            print('!!!!!!!!!!!!!!!!!!!!!!!!!!')
             # CONVERTIR EL PRECIO DE LA FOTOCOPIA A FLOAT REALIZA EL CALCULO
             if simple_doble == 'doblefaz':
                 precio = float(i['precio_fotocopia_byn_doble'])*cantidad_paginas
