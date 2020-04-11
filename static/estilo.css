@@ -158,6 +158,7 @@ html{
     top: 30%;
     left: 50%;
     margin-left: -175px;
+    font-size: 80%;
   }
   .btn.btn-link{
     left: 50%;
@@ -184,40 +185,40 @@ html{
     border-color: #31f974
   }
   .info-precio-color-simple{
-      margin-left: 175px;
-      margin-top: -40px;
+      margin-left: 135px;
+      margin-top: -35px;
     }
   .info-precio-byn-simple{
-      margin-left: 255px;
-      margin-top: -40px;
+      margin-left: 200px;
+      margin-top: -35px;
     }
     .info-precio-color-doble{
-        margin-left: 185px;
-        margin-top: -40px;
+        margin-left: 150px;
+        margin-top: -35px;
       }
     .info-precio-byn-doble{
-        margin-left: 270px;
-        margin-top: -40px;
+        margin-left: 220px;
+        margin-top: -35px;
       }
     .info-mail{
-      margin-left: 58px;
-      margin-top: -40px;
+      margin-left: 45px;
+      margin-top: -35px;
     }
 
     .info-telefono{
-      margin-left: 74px;
-      margin-top: -40px;
+      margin-left: 60px;
+      margin-top: -35px;
     }
 
     .info-direccion{
-      margin-left: 83px;
-      margin-top: -40px;
+      margin-left: 65px;
+      margin-top: -35px;
     }
 
     .info-sabado{
       font-weight:bold;
-      margin-left: 153px;
-      margin-top: -40px;
+      margin-left: 123px;
+      margin-top: -35px;
     }
     .Titulo{
       position:relative;
