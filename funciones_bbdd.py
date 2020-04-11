@@ -247,7 +247,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
                         hora_a = i['hora_apertura_maniana']
                         hora_c = i['hora_cierre_maniana']
                         situacion = 'cerrado'
-
+            precio = float(precio)
             # SE ARMA UN DICCIONARIO CON TODOS LOS CAMPOS
             diccionario = {
                 'id': i['_id'],
@@ -374,6 +374,7 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
                         hora_a = i['hora_apertura_maniana']
                         hora_c = i['hora_cierre_maniana']
                         situacion = 'cerrado'
+            precio = float(precio)
             # SE ARMA UN DICCIONARIO CON TODOS LOS CAMPOS
             diccionario = {
                 'id': i['_id'],
