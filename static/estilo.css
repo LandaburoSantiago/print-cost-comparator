@@ -184,42 +184,6 @@ html{
     border-width: 2px;
     border-color: #31f974
   }
-  .info-precio-color-simple{
-      margin-left: 135px;
-      margin-top: -35px;
-    }
-  .info-precio-byn-simple{
-      margin-left: 200px;
-      margin-top: -35px;
-    }
-    .info-precio-color-doble{
-        margin-left: 150px;
-        margin-top: -35px;
-      }
-    .info-precio-byn-doble{
-        margin-left: 220px;
-        margin-top: -35px;
-      }
-    .info-mail{
-      margin-left: 45px;
-      margin-top: -35px;
-    }
-
-    .info-telefono{
-      margin-left: 60px;
-      margin-top: -35px;
-    }
-
-    .info-direccion{
-      margin-left: 65px;
-      margin-top: -35px;
-    }
-
-    .info-sabado{
-      font-weight:bold;
-      margin-left: 123px;
-      margin-top: -35px;
-    }
     .Titulo{
       position:relative;
       text-align: center;
@@ -227,9 +191,7 @@ html{
       color: white;
       background-color: #1b1b1b;
     }
-      .titulos-info{
-        font-weight:bold;
-      }
+
       .miNombre{
       position:absolute;
       color:#464444;
@@ -457,42 +419,6 @@ html{
     border-width: 2px;
     border-color: #31f974
   }
-  .info-precio-color-simple{
-      margin-left: 175px;
-      margin-top: -40px;
-    }
-  .info-precio-byn-simple{
-      margin-left: 255px;
-      margin-top: -40px;
-    }
-    .info-precio-color-doble{
-        margin-left: 185px;
-        margin-top: -40px;
-      }
-    .info-precio-byn-doble{
-        margin-left: 270px;
-        margin-top: -40px;
-      }
-    .info-mail{
-      margin-left: 58px;
-      margin-top: -40px;
-    }
-
-    .info-telefono{
-      margin-left: 74px;
-      margin-top: -40px;
-    }
-
-    .info-direccion{
-      margin-left: 83px;
-      margin-top: -40px;
-    }
-
-    .info-sabado{
-      font-weight:bold;
-      margin-left: 153px;
-      margin-top: -40px;
-    }
     .Titulo{
       position:relative;
       text-align: center;
@@ -500,9 +426,7 @@ html{
       color: white;
       background-color: #1b1b1b;
     }
-    .titulos-info{
-      font-weight:bold;
-    }
+
     .miNombre{
       position:absolute;
       color:#464444;
@@ -729,42 +653,6 @@ html{
     border-width: 2px;
     border-color: #31f974
   }
-  .info-precio-color-simple{
-      margin-left: 175px;
-      margin-top: -40px;
-    }
-  .info-precio-byn-simple{
-      margin-left: 255px;
-      margin-top: -40px;
-    }
-    .info-precio-color-doble{
-        margin-left: 185px;
-        margin-top: -40px;
-      }
-    .info-precio-byn-doble{
-        margin-left: 270px;
-        margin-top: -40px;
-      }
-    .info-mail{
-      margin-left: 58px;
-      margin-top: -40px;
-    }
-
-    .info-telefono{
-      margin-left: 74px;
-      margin-top: -40px;
-    }
-
-    .info-direccion{
-      margin-left: 83px;
-      margin-top: -40px;
-    }
-
-    .info-sabado{
-      font-weight:bold;
-      margin-left: 153px;
-      margin-top: -40px;
-    }
     .Titulo{
       position:relative;
       text-align: center;
@@ -773,9 +661,6 @@ html{
       background-color: #1b1b1b;
     }
 
-    .titulos-info{
-      font-weight:bold;
-    }
     .miNombre{
       position:absolute;
       color:#464444;
