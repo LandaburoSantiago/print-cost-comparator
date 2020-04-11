@@ -164,7 +164,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
             cantidad_paginas = cantidad_paginas // 2
             cantidad_paginas += 1
     for i in documento:
-        if i['aparecer_calculadora'] is True:
+        if i['aparecer_calculadora'] == 'True':
             # CONVERTIR EL PRECIO DE LA FOTOCOPIA A FLOAT REALIZA EL CALCULO
             if simple_doble == 'doblefaz':
                 precio = float(i['precio_fotocopia_color_doble'])*cantidad_paginas
@@ -291,7 +291,7 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
             cantidad_paginas = cantidad_paginas // 2
             cantidad_paginas += 1
     for i in documento:
-        if i['aparecer_calculadora'] is True:
+        if i['aparecer_calculadora'] == 'True':
             # CONVERTIR EL PRECIO DE LA FOTOCOPIA A FLOAT REALIZA EL CALCULO
             if simple_doble == 'doblefaz':
                 precio = float(i['precio_fotocopia_byn_doble'])*cantidad_paginas
