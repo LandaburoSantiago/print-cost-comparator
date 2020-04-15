@@ -262,6 +262,12 @@ html{
     left: 50%;
     margin-left: -152.99px;
   }
+  .texto-alerta-cadetes{
+    position: relative;
+    width: 680px;
+    left: 60%;
+    margin-left: -440px;
+  }
   .link-boton{
     position:absolute;
   }
@@ -495,6 +501,12 @@ html{
     width: 305.98px;
     left: 50%;
     margin-left: -152.99px;
+  }
+  .texto-alerta-cadetes{
+    position: relative;
+    width: 680px;
+    left: 60%;
+    margin-left: -440px;
   }
   .link-boton{
     position:absolute;
