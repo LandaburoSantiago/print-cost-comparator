@@ -138,6 +138,7 @@ def listar(ciudad, momento_dia, hora, dia):
             'mail': i['mail'],
             'telefono': i['telefono'],
             'direccion': i['direccion'],
+            'link-maps': i['link-maps'],
             # SE AGREGA HORA_APERTURA Y HORA_CIERRE PARA MOSTRAR EN EL HTML
             'hora_apertura': hora_a,
             'hora_cierre': hora_c,
@@ -260,6 +261,7 @@ def listar_color(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia)
                 'mail': i['mail'],
                 'telefono': i['telefono'],
                 'direccion': i['direccion'],
+                'link-maps': i['link-maps'],
                 # SE AGREGA HORA_APERTURA Y HORA_CIERRE PARA MOSTRAR EN EL HTML
                 'hora_apertura': hora_a,
                 'hora_cierre': hora_c,
@@ -387,6 +389,7 @@ def listar_byn(cantidad_paginas, simple_doble, ciudad, momento_dia, hora, dia):
                 'mail': i['mail'],
                 'telefono': i['telefono'],
                 'direccion': i['direccion'],
+                'link-maps': i['link-maps'],
                 # SE AGREGA HORA_APERTURA Y HORA_CIERRE PARA MOSTRAR EN EL HTML
                 'hora_apertura': hora_a,
                 'hora_cierre': hora_c,
