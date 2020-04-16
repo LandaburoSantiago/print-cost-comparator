@@ -41,7 +41,7 @@
           <!-- <p class="info-mail"><a href="mailto:{{info['mail']}}">{{info['mail']}}</a></p> -->
           <p class="titulos-info"><b>Teléfono: </b>{{info['telefono']}}</p>
           <!-- <p class="info-telefono">{{info['telefono']}}</p> -->
-          <p class="titulos-info"><b>Dirección: </b>{{info['direccion']}}</p>
+          <p class="titulos-info"><b>Dirección: </b><a href="{{info['link-maps']}}">{{info['direccion']}}</a></p>
           <!-- <p class="info-direccion">{{info['direccion']}}</p> -->
           <div class="imagenes-redes">
               <a href="{{info['facebook']}}"> <img class="img-infoFace" src="{{url_for('static', filename = 'iconofacebook.png')}}" alt="Facebook"></a>
@@ -75,7 +75,7 @@
       <div class="card-header" id="headingThree">
         <h2 class="mb-0">
           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Horario de atención
+            Horario de atención / Descripción
           </button>
         </h2>
       </div>
@@ -83,6 +83,7 @@
         <div class="card-body">
           <h6 class="card-subtitle mb-2 text-muted">Horarios: {{info['hora_apertura_maniana']}} a {{info['hora_cierre_maniana']}} y {{info['hora_apertura_tarde']}} a {{info['hora_cierre_maniana']}}</h6>
           <p class="titulos-info"><b>El sábado a la tarde {{info['sabado_tarde']}} abre</b></p>
+          <p class="titulos-info"><b>Descripción: </b>{{info['descripcion']}}</p>
           <!-- <p class="info-sabado">{{info['sabado_tarde']}} abre</p> -->
         </div>
       </div>
